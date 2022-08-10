@@ -35,15 +35,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveSetTrip:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vyx-Dd-jHK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tripName" destination="Vps-bK-Z2e" id="Ong-2D-Xec"/>
+                        <outlet property="tripNotes" destination="tvl-fl-1Ye" id="ysH-ga-5nz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8.6956521739130448" y="146.65178571428569"/>
+            <point key="canvasLocation" x="371" y="186"/>
         </scene>
     </scenes>
     <resources>
