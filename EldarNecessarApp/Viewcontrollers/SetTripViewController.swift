@@ -8,6 +8,8 @@
 import UIKit
 
 class SetTripViewController: UIViewController {
+    
+
 
     @IBOutlet weak var tripName: UITextField!
     @IBOutlet weak var tripNotes: UITextField!
@@ -23,6 +25,7 @@ class SetTripViewController: UIViewController {
         guard tripName.hasText,
         let textForCell = tripName.text
         else { return }
+        addItem(name: textForCell)
         dismiss(animated: true, completion: nil)
     }
     

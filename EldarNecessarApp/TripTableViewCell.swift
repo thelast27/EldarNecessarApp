@@ -9,9 +9,14 @@ import UIKit
 
 class TripTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tripName: UILabel!
+    
+    
+    static var key = "TripTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        tripName.text = ""
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
