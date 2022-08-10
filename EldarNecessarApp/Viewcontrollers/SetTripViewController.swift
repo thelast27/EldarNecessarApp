@@ -26,8 +26,9 @@ class SetTripViewController: UIViewController {
         let textForCell = tripName.text
         else { return }
         addItem(name: textForCell)
-        dismiss(animated: true, completion: nil)
-    }
-    
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tableViewChanged"), object: nil)
 
+        }
+    }
 }
