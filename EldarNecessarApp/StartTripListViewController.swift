@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addTrip(_ sender: Any) {
+        let VC = UIStoryboard(name: "SetTripStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController")
+        present(VC, animated: true)
         tripListTableView.reloadData()
     }
     
