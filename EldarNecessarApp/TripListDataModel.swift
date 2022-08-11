@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
-var tripsArray: [String] = ["Поход в горы", "Поездка на речку"]
+var tripsArray: [String] = []
+var contentOfDerectory: [URL]!
+
 
 func addItem(name: String) {
     tripsArray.append(name)
