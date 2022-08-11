@@ -15,12 +15,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
-//        cell.textLabel?.text = "Hello"
-//        return UITableViewCell()
-         let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell
-        cell?.tripName.text = tripsArray[indexPath.row]
-                return cell!
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell {
+            cell.tripName.text = tripsArray[indexPath.row]
+            cell.tripPhoto.image = UIImage(contentsOfFile: (contentOfDerectory?[indexPath.row].path) ?? "person")
+            return cell
+        }
+        return UITableViewCell()
     }
     
     
