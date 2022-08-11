@@ -18,6 +18,7 @@
 		4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */; };
 		4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44E39A28A38CC8004D936E /* SetTripViewController.swift */; };
 		4D44E3C528A3AE28004D936E /* TripListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44E3C428A3AE28004D936E /* TripListDataModel.swift */; };
+		4DD40BDF28A518F0001A0F4F /* SetTripVС + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD40BDE28A518F0001A0F4F /* SetTripVС + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4D3AA28D28A282AA00E829B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D44E39A28A38CC8004D936E /* SetTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTripViewController.swift; sourceTree = "<group>"; };
 		4D44E3C428A3AE28004D936E /* TripListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListDataModel.swift; sourceTree = "<group>"; };
+		4DD40BDE28A518F0001A0F4F /* SetTripVС + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetTripVС + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 				4D44E39F28A38E58004D936E /* Viewcontrollers */,
 				4D44E39E28A38E4A004D936E /* Storyboards */,
 				4D3AA28828A282AA00E829B3 /* Assets.xcassets */,
-				4D070ADA28A28AC500FA7102 /* TripListVC + Extension.swift */,
+				4DD40BE028A518FC001A0F4F /* Extensions */,
 				4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */,
 				4D3AA28D28A282AA00E829B3 /* Info.plist */,
 				4D44E3C428A3AE28004D936E /* TripListDataModel.swift */,
@@ -96,6 +98,15 @@
 				4D44E39A28A38CC8004D936E /* SetTripViewController.swift */,
 			);
 			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		4DD40BE028A518FC001A0F4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D070ADA28A28AC500FA7102 /* TripListVC + Extension.swift */,
+				4DD40BDE28A518F0001A0F4F /* SetTripVС + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD40BDF28A518F0001A0F4F /* SetTripVС + Extension.swift in Sources */,
 				4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */,
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
 				4D44E3C528A3AE28004D936E /* TripListDataModel.swift in Sources */,
