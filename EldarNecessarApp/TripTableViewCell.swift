@@ -10,6 +10,7 @@ import UIKit
 class TripTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tripName: UILabel!
+    @IBOutlet weak var tripPhoto: UIImageView!
     
     
     static var key = "TripTableViewCell"
@@ -17,6 +18,7 @@ class TripTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         tripName.text = ""
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
