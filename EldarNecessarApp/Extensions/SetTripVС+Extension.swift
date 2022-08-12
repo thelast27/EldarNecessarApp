@@ -18,13 +18,14 @@ extension SetTripViewController: UIImagePickerControllerDelegate, UINavigationCo
             let imageJpgData = editedImage.jpegData(compressionQuality: 1)
             do {
                 try imageJpgData?.write(to: newImageURL)
-                contentOfDerectory?.append(newImageURL)
                 previewOfTripPhoto.image = editedImage
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tableViewChanged"), object: nil)
             } catch {
                 print(error)
             }
-            dismiss(animated: true)
+            dismiss(animated: true) {
+                self.picsClosure?(newImageURL)
+            }
         }
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
