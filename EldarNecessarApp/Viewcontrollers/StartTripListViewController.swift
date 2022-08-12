@@ -8,23 +8,36 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var tripListTableView: UITableView!
+    
+    
+    var arrayWithTrips: [String] = []
+    var contentOfDerectory: [URL] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tripListTableView.register(UINib(nibName: "TripTableViewCell", bundle: nil), forCellReuseIdentifier: TripTableViewCell.key)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.refresh), name: NSNotification.Name(rawValue: "tableViewChanged"), object: nil)
-
     }
     
-    @objc fileprivate func refresh() {
-       self.tripListTableView.reloadData()
-   }
+
+    
     
     @IBAction func addTrip(_ sender: Any) {
-        let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController")
-        present(VC, animated: true)
+        if let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController") as? SetTripViewController {
+            VC.tripsClosure = { text in
+                self.arrayWithTrips.insert(text, at: 0)
+                self.tripListTableView.reloadData()
+            }
+            VC.picsClosure = { pics in
+                self.contentOfDerectory.insert(pics, at: 0)
+                self.tripListTableView.reloadData()
+            }
+            present(VC, animated: true)
+        }
+     
     }
     
 }
