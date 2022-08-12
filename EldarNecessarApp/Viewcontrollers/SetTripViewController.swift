@@ -16,13 +16,16 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var previewOfTripPhoto: UIImageView!
     
     var documentsURL: URL!
+    var urlForPic: URL!
+    typealias Closure = (String) -> ()
+    typealias PicsClosure = (URL) -> ()
+    var tripsClosure: Closure?
+    var picsClosure: PicsClosure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        contentOfDerectory = try? fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: .none)
-        
     }
     
     
@@ -30,10 +33,8 @@ class SetTripViewController: UIViewController {
         guard tripName.hasText,
               let textForCell = tripName.text
         else { return }
-        addItem(name: textForCell)
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tableViewChanged"), object: nil)
-            
+        dismiss(animated: true) { [self] in
+            tripsClosure?(textForCell)
         }
     }
     
