@@ -16,7 +16,6 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var previewOfTripPhoto: UIImageView!
     
     var documentsURL: URL!
-    var urlForPic: URL!
     typealias Closure = (String) -> ()
     typealias PicsClosure = (URL) -> ()
     var tripsClosure: Closure?
