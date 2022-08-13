@@ -15,7 +15,7 @@ class StartTripListViewController: UIViewController {
     
     
     var arrayWithTrips: [String] = []
-    var contentOfDerectory: [URL] = []
+    var contentOfDirectory: [URL] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class StartTripListViewController: UIViewController {
                 self.tripListTableView.reloadData()
             }
             VC.picsClosure = { pics in
-                self.contentOfDerectory.insert(pics, at: 0)
+                self.contentOfDirectory.insert(pics, at: 0)
                 self.tripListTableView.reloadData()
             }
             present(VC, animated: true)
