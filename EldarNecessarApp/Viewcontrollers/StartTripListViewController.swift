@@ -27,13 +27,13 @@ class StartTripListViewController: UIViewController {
     
     @IBAction func addTrip(_ sender: Any) {
         if let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController") as? SetTripViewController {
-            VC.tripsClosure = { text in
-                self.arrayWithTrips.insert(text, at: 0)
-                self.tripListTableView.reloadData()
+            VC.tripsClosure = { [ weak self ] text in
+                self?.arrayWithTrips.insert(text, at: 0)
+                self?.tripListTableView.reloadData()
             }
-            VC.picsClosure = { pics in
-                self.contentOfDirectory.insert(pics, at: 0)
-                self.tripListTableView.reloadData()
+            VC.picsClosure = { [ weak self ] pics in
+                self?.contentOfDirectory.insert(pics, at: 0)
+                self?.tripListTableView.reloadData()
             }
             present(VC, animated: true)
         }
