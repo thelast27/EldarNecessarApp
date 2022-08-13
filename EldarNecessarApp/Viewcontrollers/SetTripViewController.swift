@@ -14,6 +14,9 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var tripName: UITextField!
     @IBOutlet weak var tripNotes: UITextField!
     @IBOutlet weak var previewOfTripPhoto: UIImageView!
+    @IBOutlet weak var departureDate: UIDatePicker!
+    @IBOutlet weak var returnDate: UIDatePicker!
+    @IBOutlet weak var durationLabel: UILabel!
     
     var documentsURL: URL!
     typealias SendTripsDataClosure = (String) -> ()
@@ -44,6 +47,25 @@ class SetTripViewController: UIViewController {
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
+    
+    @IBAction func getDateFromPicker(_ sender: Any) {
+        durationCalculation()
+    }
+    @IBAction func returnDate(_ sender: Any) {
+        durationCalculation()
+    }
+    
+    fileprivate func durationCalculation() {
+        
+        let durationFromDepartureDate = departureDate.calendar.dateComponents([.day, .month, .year], from: departureDate.date)
+        let durationFromReturnDate = returnDate.calendar.dateComponents([.day, .month, .year], from: returnDate.date)
+        let durationInDays = durationFromReturnDate.day! - durationFromDepartureDate.day!
+        durationLabel.isHidden = false
+        durationLabel.text = "\(durationInDays) day(s)"
+        view.layoutIfNeeded()
+        
+    }
+    
 }
 
 
