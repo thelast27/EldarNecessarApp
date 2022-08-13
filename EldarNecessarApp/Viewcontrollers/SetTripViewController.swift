@@ -16,10 +16,10 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var previewOfTripPhoto: UIImageView!
     
     var documentsURL: URL!
-    typealias Closure = (String) -> ()
-    typealias PicsClosure = (URL) -> ()
-    var tripsClosure: Closure?
-    var picsClosure: PicsClosure?
+    typealias SendTripsDataClosure = (String) -> ()
+    typealias SendPicsForTripClosure = (URL) -> ()
+    var tripsClosure: SendTripsDataClosure?
+    var picsClosure: SendPicsForTripClosure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
