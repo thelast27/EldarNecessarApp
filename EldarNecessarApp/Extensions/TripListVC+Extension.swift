@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension StartTripListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayWithTrips.count
