@@ -35,9 +35,8 @@ class SetTripViewController: UIViewController {
         guard tripName.hasText,
               let textForCell = tripName.text
         else { return }
-        dismiss(animated: true) { [self] in
-            tripsClosure?(textForCell)
-        }
+        tripsClosure?(textForCell)
+       dismiss(animated: true)
     }
     
     @IBAction func addPhoto(_ sender: Any) {
