@@ -19,7 +19,6 @@ extension SetTripViewController: UIImagePickerControllerDelegate, UINavigationCo
             do {
                 try imageJpgData?.write(to: newImageURL)
                 previewOfTripPhoto.image = editedImage
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "tableViewChanged"), object: nil)
             } catch {
                 print(error)
             }
