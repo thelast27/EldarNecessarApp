@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trip List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TripListViewController" customModule="EldarNecessarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XSg-7W-dO7">
+                                <rect key="frame" x="0.0" y="80" width="414" height="680"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="OS8-0K-3jb"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="fnQ-fg-PT0"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-aA-Wya">
+                                <rect key="frame" x="0.0" y="760" width="414" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="addNewTrip:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="obi-NO-d4R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DRP-aA-Wya" secondAttribute="trailing" id="0UZ-Vz-tYT"/>
+                            <constraint firstItem="DRP-aA-Wya" firstAttribute="top" secondItem="XSg-7W-dO7" secondAttribute="bottom" id="7c6-mE-DuZ"/>
+                            <constraint firstItem="XSg-7W-dO7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="B3F-it-3gZ"/>
+                            <constraint firstAttribute="bottom" secondItem="XSg-7W-dO7" secondAttribute="bottom" constant="136" id="E4v-0w-GDV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DRP-aA-Wya" secondAttribute="bottom" constant="61" id="blS-zY-UoH"/>
+                            <constraint firstItem="DRP-aA-Wya" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fEM-av-c0S"/>
+                            <constraint firstItem="XSg-7W-dO7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="rdR-Od-5S8"/>
+                            <constraint firstAttribute="trailing" secondItem="XSg-7W-dO7" secondAttribute="trailing" id="xlb-PS-qpW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tripListTableView" destination="XSg-7W-dO7" id="lvU-Km-BID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684.05797101449275" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
