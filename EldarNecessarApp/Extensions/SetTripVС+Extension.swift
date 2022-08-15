@@ -22,9 +22,8 @@ extension SetTripViewController: UIImagePickerControllerDelegate, UINavigationCo
             } catch {
                 print(error)
             }
-            dismiss(animated: true) {
-                self.picsClosure?(newImageURL)
-            }
+            picsClosure?(newImageURL)
+            dismiss(animated: true)
         }
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
