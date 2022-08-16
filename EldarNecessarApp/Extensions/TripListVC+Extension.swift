@@ -25,12 +25,9 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = UIStoryboard(name: "ItemsList", bundle: nil)
-        if let VC = viewController.instantiateViewController(withIdentifier: "ItemsVC") as? ItemsViewController {
-        let navigationVC = UINavigationController(rootViewController: VC)
-        navigationVC.modalPresentationStyle = .overFullScreen
-
-        present(navigationVC, animated: true)
+            let viewController = UIStoryboard(name: "ItemsList", bundle: nil)
+            if let VC = viewController.instantiateViewController(withIdentifier: "ItemsVC") as? ItemsViewController {
+                navigationController?.pushViewController(VC, animated: true)
     }
     
 }
