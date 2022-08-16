@@ -7,97 +7,125 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D933DFC-4864-4E00-8F37-DF2F8DDC548A"
-            shouldBeEnabled = "No"
+            uuid = "7DF94106-9579-423F-81D8-EE52855C6E12"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EldarNecessarApp/Viewcontrollers/SetItemViewController.swift"
+            filePath = "EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "saveItem(_:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "addItemAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB12D429-279E-4D83-AE4A-40493D5B5C02"
+            uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EldarNecessarApp/Viewcontrollers/SetItemViewController.swift"
+            filePath = "EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "saveItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "05482F6B-B49B-4487-83E7-54151E838FCC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EldarNecessarApp/Viewcontrollers/SetItemViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "saveItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1A448EE6-CB6E-4F1C-B89C-EE6624F5CEBF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EldarNecessarApp/Viewcontrollers/SetItemViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "saveItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2F128D4C-884E-48C6-BE45-40123AA8D057"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EldarNecessarApp/Viewcontrollers/SetItemViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "saveItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CE7C28C2-BD59-4963-A228-01EAD6924DCD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EldarNecessarApp/Viewcontrollers/SetItemViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "saveItem(_:)"
-            landmarkType = "7">
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ItemsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF - d8d94e9ecefc8f09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EldarNecessarApp.ItemsViewController.arrayWithItems.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "EldarNecessarApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/%20Diploma/EldarNecessarApp/EldarNecessarApp/EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF - 696a03cff303031d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EldarNecessarApp.ItemsViewController.arrayWithItems.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "EldarNecessarApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/%20Diploma/EldarNecessarApp/EldarNecessarApp/EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF - 14f9708e79a9dc0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EldarNecessarApp.ItemsViewController.arrayWithItems.modify : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "EldarNecessarApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/%20Diploma/EldarNecessarApp/EldarNecessarApp/EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF - 4b2815a2b9c3580d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EldarNecessarApp.ItemsViewController.arrayWithItems.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "EldarNecessarApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/%20Diploma/EldarNecessarApp/EldarNecessarApp/EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF - b0e07bcab66c432a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EldarNecessarApp.ItemsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; EldarNecessarApp.ItemsViewController"
+                  moduleName = "EldarNecessarApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/%20Diploma/EldarNecessarApp/EldarNecessarApp/EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "75D60F26-3554-49FA-B4C0-24BE883178EF - 9dc736007bbaf5d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EldarNecessarApp.ItemsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;EldarNecessarApp.ItemsViewController&gt;"
+                  moduleName = "EldarNecessarApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/%20Diploma/EldarNecessarApp/EldarNecessarApp/EldarNecessarApp/Viewcontrollers/ItemsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

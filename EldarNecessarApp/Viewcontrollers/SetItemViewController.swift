@@ -21,6 +21,8 @@ class SetItemViewController: UIViewController {
     
     var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     var itemArray: [String] = []
+    typealias SendItemDetails = ([String]) -> ()
+    var itemsClosure: SendItemDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,7 @@ class SetItemViewController: UIViewController {
         }
         guard itemQtyLabel != nil else { return }
         itemArray.append("\(itemQtyLabel.text ?? "0")")
+        itemsClosure?(itemArray)
     }
 }
 

@@ -8,6 +8,10 @@
 import UIKit
 
 class ItemsViewController: UIViewController {
+    
+    
+    var arrayWithItems: [String] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,10 @@ class ItemsViewController: UIViewController {
     @objc func addItemAction(_ sender: Any) {
         let viewController = UIStoryboard(name: "ItemsList", bundle: nil)
         if let VC = viewController.instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController {
+            VC.itemsClosure = { [ weak self ] items in
+                self?.arrayWithItems = items
+//                self?.tripListTableView.reloadData()
+            }
         let navigationVC = UINavigationController(rootViewController: VC)
         present(navigationVC, animated: true)
     }
