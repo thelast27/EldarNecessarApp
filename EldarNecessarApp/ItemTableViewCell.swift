@@ -8,7 +8,13 @@
 import UIKit
 
 class ItemTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemDescription: UILabel!
+    @IBOutlet weak var itemQty: UILabel!
+    
+    static var key = "ItemTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

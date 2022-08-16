@@ -58,6 +58,7 @@ class SetItemViewController: UIViewController {
         guard itemQtyLabel != nil else { return }
         itemArray.append("\(itemQtyLabel.text ?? "0")")
         itemsClosure?(itemArray)
+        dismiss(animated: true)
     }
 }
 
