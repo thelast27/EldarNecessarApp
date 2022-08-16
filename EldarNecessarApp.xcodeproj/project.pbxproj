@@ -12,6 +12,8 @@
 		4D070ADF28A28D0400FA7102 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */; };
 		4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */; };
 		4D070AE428A2901800FA7102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D070AE228A2901800FA7102 /* Main.storyboard */; };
+		4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */; };
+		4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */; };
 		4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA27F28A282A500E829B3 /* AppDelegate.swift */; };
 		4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA28128A282A500E829B3 /* SceneDelegate.swift */; };
 		4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28828A282AA00E829B3 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTripListViewController.swift; sourceTree = "<group>"; };
 		4D070AE328A2901800FA7102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
+		4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = EldarNecessarApp/Viewcontrollers/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
 		4D3AA27C28A282A500E829B3 /* EldarNecessarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldarNecessarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3AA27F28A282A500E829B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3AA28128A282A500E829B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4D070AE228A2901800FA7102 /* Main.storyboard */,
+				4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			children = (
 				4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */,
 				4D44E39A28A38CC8004D936E /* SetTripViewController.swift */,
+				4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */,
 				4D070AE428A2901800FA7102 /* Main.storyboard in Resources */,
 				4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */,
 				4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */,
@@ -183,6 +190,7 @@
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
 				4D070ADE28A28D0400FA7102 /* TripTableViewCell.swift in Sources */,
 				4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */,
+				4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */,
 				4D070ADB28A28AC500FA7102 /* TripListVC+Extension.swift in Sources */,
 				4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */,
 			);
