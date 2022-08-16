@@ -15,9 +15,12 @@ class SetItemViewController: UIViewController {
     @IBOutlet weak var itemQtyLabel: UILabel!
     @IBOutlet weak var qtyItemsStepper: UIStepper!
     @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var itemName: UITextField!
+    @IBOutlet weak var itemDescrip: UITextField!
     
     
     var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
+    var itemArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,17 @@ class SetItemViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func saveItem(_ sender: Any) {
+        guard itemName.hasText,
+              let text = itemName.text
+        else { return }
+        itemArray.append(text)
+        if itemDescrip.hasText {
+            itemArray.append(itemDescrip.text!)
+        }
+        guard itemQtyLabel != nil else { return }
+        itemArray.append("\(itemQtyLabel.text ?? "0")")
+    }
 }
 
 

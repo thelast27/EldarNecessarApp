@@ -91,6 +91,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveItem:" destination="lE2-JX-jPG" eventType="touchUpInside" id="lJz-A7-jdi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V08-Ds-xBx"/>
@@ -98,6 +101,8 @@
                     </view>
                     <connections>
                         <outlet property="categoryTextField" destination="M4u-aM-fRZ" id="vwu-zP-Nqr"/>
+                        <outlet property="itemDescrip" destination="c0J-Em-Dtk" id="WAr-0D-8L3"/>
+                        <outlet property="itemName" destination="yVe-fU-UDj" id="9gt-cJ-mtw"/>
                         <outlet property="itemQtyLabel" destination="1ve-cA-Vpb" id="fmf-PC-2V6"/>
                         <outlet property="qtyItemsStepper" destination="Z1c-hq-gl5" id="LMI-jq-qj9"/>
                     </connections>
