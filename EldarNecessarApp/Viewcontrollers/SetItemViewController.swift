@@ -35,6 +35,13 @@ class SetItemViewController: UIViewController {
     @IBAction func qtyItemsStepperAction(_ sender: UIStepper) {
         itemQtyLabel.text = Int(sender.value).description
     }
+    
+    
+    
+    @IBAction func cancelSetItem(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
 
 
