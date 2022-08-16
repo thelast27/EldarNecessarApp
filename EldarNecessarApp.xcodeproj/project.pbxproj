@@ -15,6 +15,7 @@
 		4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */; };
 		4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */; };
 		4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */; };
+		4D1EE88B28ABA961003F6EA9 /* SetItemVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88A28ABA961003F6EA9 /* SetItemVC+Extension.swift */; };
 		4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA27F28A282A500E829B3 /* AppDelegate.swift */; };
 		4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA28128A282A500E829B3 /* SceneDelegate.swift */; };
 		4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28828A282AA00E829B3 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
 		4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = EldarNecessarApp/Viewcontrollers/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
 		4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetItemViewController.swift; path = EldarNecessarApp/Viewcontrollers/SetItemViewController.swift; sourceTree = SOURCE_ROOT; };
+		4D1EE88A28ABA961003F6EA9 /* SetItemVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetItemVC+Extension.swift"; sourceTree = "<group>"; };
 		4D3AA27C28A282A500E829B3 /* EldarNecessarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldarNecessarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3AA27F28A282A500E829B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3AA28128A282A500E829B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				4D070ADA28A28AC500FA7102 /* TripListVC+Extension.swift */,
 				4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */,
+				4D1EE88A28ABA961003F6EA9 /* SetItemVC+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */,
 				4D070ADE28A28D0400FA7102 /* TripTableViewCell.swift in Sources */,
 				4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */,
+				4D1EE88B28ABA961003F6EA9 /* SetItemVC+Extension.swift in Sources */,
 				4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */,
 				4D070ADB28A28AC500FA7102 /* TripListVC+Extension.swift in Sources */,
 				4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */,
