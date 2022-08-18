@@ -16,18 +16,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-c5-jQU">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-c5-jQU">
                         <rect key="frame" x="5" y="12" width="148" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-4G-ghp">
-                        <rect key="frame" x="152" y="0.0" width="168" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-4G-ghp">
+                        <rect key="frame" x="161" y="0.0" width="159" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="Rvc-GG-cBr"/>
+                            <constraint firstAttribute="width" constant="159" id="fop-02-SEe"/>
+                        </constraints>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="KNM-c5-jQU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1e3-n6-Qzs"/>
+                    <constraint firstAttribute="bottom" secondItem="KNM-c5-jQU" secondAttribute="bottom" constant="11" id="BiW-1m-Vp3"/>
+                    <constraint firstAttribute="bottom" secondItem="J1B-4G-ghp" secondAttribute="bottom" id="EAR-0g-rqI"/>
+                    <constraint firstItem="J1B-4G-ghp" firstAttribute="leading" secondItem="KNM-c5-jQU" secondAttribute="trailing" constant="8" id="V3z-IH-iCx"/>
+                    <constraint firstItem="KNM-c5-jQU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="asX-JI-PoZ"/>
+                    <constraint firstAttribute="trailing" secondItem="J1B-4G-ghp" secondAttribute="trailing" id="e8l-et-Ccq"/>
+                    <constraint firstItem="J1B-4G-ghp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mnc-aK-sOC"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

@@ -24,22 +24,22 @@ class ItemsViewController: UIViewController {
     
     
     @objc func addItemAction(_ sender: Any) {
-        let viewController = UIStoryboard(name: "ItemsList", bundle: nil)
-        if let VC = viewController.instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController {
-            VC.itemsClosure = { [ weak self ] items in
+        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController else { return }
+        
+            vc.itemsClosure = { [ weak self ] items in
                 self?.arrayWithItems.insert(items, at: 0)
                 self?.itemListTableView.reloadData()
             }
-            VC.itemsDetailsClosure = { [ weak self ] details in
+            vc.itemsDetailsClosure = { [ weak self ] details in
                 self?.otherItemDetails = details
                 self?.itemListTableView.reloadData()
             }
-            let navigationVC = UINavigationController(rootViewController: VC)
+            let navigationVC = UINavigationController(rootViewController: vc)
             present(navigationVC, animated: true)
         }
         
     }
-}
+
 
 extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -15,7 +15,7 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell {
             cell.tripName.text = arrayWithTrips[indexPath.row]
             cell.tripPhoto.image = UIImage(contentsOfFile: (contentOfDirectory[indexPath.row].path)) // если пытаюсь загрузить просто текст, без фото - ошибка Thread 1: Fatal error: Index out of range
@@ -25,10 +25,7 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let viewController = UIStoryboard(name: "ItemsList", bundle: nil)
-            if let VC = viewController.instantiateViewController(withIdentifier: "ItemsVC") as? ItemsViewController {
-                navigationController?.pushViewController(VC, animated: true)
+        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "ItemsVC") as? ItemsViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
-}
 }
