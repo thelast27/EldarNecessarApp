@@ -27,9 +27,8 @@ class ItemTableViewCell: UITableViewCell {
     }
     
     func updateLabels(date: [String]) {
-        itemName.text = date[0]
-        itemDescription.text = date[1]
-        itemQty.text = date[2]
+        itemDescription.text = date[0]
+        itemQty.text = date[1]
     }
     
 }

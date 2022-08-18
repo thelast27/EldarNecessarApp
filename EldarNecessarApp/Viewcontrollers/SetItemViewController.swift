@@ -20,9 +20,11 @@ class SetItemViewController: UIViewController {
     
     
     var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
-    var itemArray: [String] = []
+    var otherItemDetails: [String] = []
+    typealias SendItemName = (String) -> ()
+    var itemsClosure: SendItemName?
     typealias SendItemDetails = ([String]) -> ()
-    var itemsClosure: SendItemDetails?
+    var itemsDetailsClosure: SendItemDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +53,14 @@ class SetItemViewController: UIViewController {
         guard itemName.hasText,
               let name = itemName.text
         else { return }
-        itemArray.append(name)
         if itemDescrip.hasText {
-            itemArray.append(itemDescrip.text!)
+            otherItemDetails.append(itemDescrip.text!)
         }
         guard itemQtyLabel != nil else { return }
-        itemArray.append("\(itemQtyLabel.text ?? "0")")
-        itemsClosure?(itemArray)
+        otherItemDetails.append("\(itemQtyLabel.text ?? "0")")
+        itemsClosure?(name)
+        itemsDetailsClosure?(otherItemDetails)
+        
         dismiss(animated: true)
     }
 }
