@@ -49,9 +49,9 @@ class SetItemViewController: UIViewController {
     
     @IBAction func saveItem(_ sender: Any) {
         guard itemName.hasText,
-              let text = itemName.text
+              let name = itemName.text
         else { return }
-        itemArray.append(text)
+        itemArray.append(name)
         if itemDescrip.hasText {
             itemArray.append(itemDescrip.text!)
         }

@@ -11,7 +11,7 @@ class ItemsViewController: UIViewController {
     
     
     @IBOutlet weak var itemListTableView: UITableView!
-    var arrayWithItems: [String] = []
+    var arrayWithItems: [String]?
     
     
     override func viewDidLoad() {
@@ -39,15 +39,16 @@ class ItemsViewController: UIViewController {
 
 extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayWithItems.count
+        return (arrayWithItems?.count ?? 0) - 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.key, for: indexPath) as? ItemTableViewCell {
-            cell.itemName.text = arrayWithItems[indexPath.row]
-        return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.key, for: indexPath) as? ItemTableViewCell  else { return UITableViewCell() }
+        if let itemDetails = arrayWithItems {
+            cell.updateLabels(date: itemDetails)
         }
-        return UITableViewCell()
+        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

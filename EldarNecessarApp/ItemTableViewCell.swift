@@ -26,4 +26,10 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func updateLabels(date: [String]) {
+        itemName.text = date[0]
+        itemDescription.text = date[1]
+        itemQty.text = date[2]
+    }
+    
 }
