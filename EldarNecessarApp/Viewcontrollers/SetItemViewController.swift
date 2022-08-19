@@ -55,8 +55,8 @@ class SetItemViewController: UIViewController {
         else { return }
         
         guard itemDescrip != nil, itemQtyLabel != nil else { return }
-        otherItemDetails.append("\(itemQtyLabel.text ?? "0")")
-        otherItemDetails.append(itemDescrip.text!)
+        otherItemDetails.append(itemQtyLabel.text ?? "0")
+        otherItemDetails.append(itemDescrip.text ?? "0")
         itemsClosure?(name)
         itemsDetailsClosure?(otherItemDetails)
         

@@ -48,9 +48,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="itemDescription" destination="pH2-S5-iCs" id="g9b-1V-vQZ"/>
+                <outlet property="itemDescription" destination="pH2-S5-iCs" id="RmO-9Z-1wT"/>
                 <outlet property="itemName" destination="N6v-Tg-HVT" id="g8e-1W-1nn"/>
-                <outlet property="itemQty" destination="rbF-kC-GL5" id="naU-Bq-MsJ"/>
+                <outlet property="itemQty" destination="rbF-kC-GL5" id="U9a-yc-EiD"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
         </tableViewCell>
