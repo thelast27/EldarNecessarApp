@@ -47,13 +47,10 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.key, for: indexPath) as? ItemTableViewCell else { return UITableViewCell() }
-        if let details = otherItemDetails {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.key, for: indexPath) as? ItemTableViewCell, let details = otherItemDetails else { return UITableViewCell() }
             cell.itemName.text = arrayWithItems[indexPath.row]
             cell.updateLabels(date: details)
             return cell
-        }
-        return UITableViewCell()
     }
     
     //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
