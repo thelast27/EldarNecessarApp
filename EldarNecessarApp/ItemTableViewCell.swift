@@ -27,7 +27,7 @@ class ItemTableViewCell: UITableViewCell {
     }
     
     func updateLabels(date: [String]) {
-        if itemDescription.text?.isEmpty == false && itemQty.text?.isEmpty == true {
+        if !(itemDescription.text == nil) && !(itemQty.text == nil) {
             itemDescription.text = date[0]
             itemQty.text = date[1]
         } else {
