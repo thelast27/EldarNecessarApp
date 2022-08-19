@@ -53,11 +53,10 @@ class SetItemViewController: UIViewController {
         guard itemName.hasText,
               let name = itemName.text
         else { return }
-        if itemDescrip.hasText {
-            otherItemDetails.append(itemDescrip.text!)
-        }
-        guard itemQtyLabel != nil else { return }
+        
+        guard itemDescrip != nil, itemQtyLabel != nil else { return }
         otherItemDetails.append("\(itemQtyLabel.text ?? "0")")
+        otherItemDetails.append(itemDescrip.text!)
         itemsClosure?(name)
         itemsDetailsClosure?(otherItemDetails)
         
