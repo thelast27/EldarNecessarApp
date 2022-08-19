@@ -22,6 +22,8 @@
 		4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28828A282AA00E829B3 /* Assets.xcassets */; };
 		4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */; };
 		4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44E39A28A38CC8004D936E /* SetTripViewController.swift */; };
+		4D6682B928AFD37A00BB20C3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D6682B828AFD37A00BB20C3 /* Realm */; };
+		4D6682BB28AFD37A00BB20C3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D6682BA28AFD37A00BB20C3 /* RealmSwift */; };
 		4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6682BB28AFD37A00BB20C3 /* RealmSwift in Frameworks */,
+				4D6682B928AFD37A00BB20C3 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,16 +82,13 @@
 			children = (
 				4D3AA27F28A282A500E829B3 /* AppDelegate.swift */,
 				4D3AA28128A282A500E829B3 /* SceneDelegate.swift */,
-				4D070ADC28A28D0400FA7102 /* TripTableViewCell.swift */,
-				4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */,
+				4D6682BE28AFD3B600BB20C3 /* Cells */,
 				4D44E39F28A38E58004D936E /* Viewcontrollers */,
 				4D44E39E28A38E4A004D936E /* Storyboards */,
 				4D3AA28828A282AA00E829B3 /* Assets.xcassets */,
 				4DD40BE028A518FC001A0F4F /* Extensions */,
 				4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */,
 				4D3AA28D28A282AA00E829B3 /* Info.plist */,
-				4D1EE88C28ABC629003F6EA9 /* ItemTableViewCell.swift */,
-				4D1EE88D28ABC629003F6EA9 /* ItemTableViewCell.xib */,
 			);
 			path = EldarNecessarApp;
 			sourceTree = "<group>";
@@ -110,6 +111,33 @@
 				4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */,
 			);
 			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		4D6682BC28AFD39400BB20C3 /* ItemListTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D1EE88C28ABC629003F6EA9 /* ItemTableViewCell.swift */,
+				4D1EE88D28ABC629003F6EA9 /* ItemTableViewCell.xib */,
+			);
+			path = ItemListTableView;
+			sourceTree = "<group>";
+		};
+		4D6682BD28AFD3A800BB20C3 /* TripListTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D070ADC28A28D0400FA7102 /* TripTableViewCell.swift */,
+				4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */,
+			);
+			path = TripListTableView;
+			sourceTree = "<group>";
+		};
+		4D6682BE28AFD3B600BB20C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4D6682BD28AFD3A800BB20C3 /* TripListTableView */,
+				4D6682BC28AFD39400BB20C3 /* ItemListTableView */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4DD40BE028A518FC001A0F4F /* Extensions */ = {
@@ -137,6 +165,10 @@
 			dependencies = (
 			);
 			name = EldarNecessarApp;
+			packageProductDependencies = (
+				4D6682B828AFD37A00BB20C3 /* Realm */,
+				4D6682BA28AFD37A00BB20C3 /* RealmSwift */,
+			);
 			productName = EldarNecessarApp;
 			productReference = 4D3AA27C28A282A500E829B3 /* EldarNecessarApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 4D3AA27328A282A400E829B3;
+			packageReferences = (
+				4D6682B728AFD37A00BB20C3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 4D3AA27D28A282A500E829B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,6 +457,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D6682B728AFD37A00BB20C3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D6682B828AFD37A00BB20C3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D6682B728AFD37A00BB20C3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		4D6682BA28AFD37A00BB20C3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D6682B728AFD37A00BB20C3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D3AA27428A282A400E829B3 /* Project object */;
 }
