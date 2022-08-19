@@ -19,16 +19,21 @@ class ItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     func updateLabels(date: [String]) {
-        itemDescription.text = date[0]
-        itemQty.text = date[1]
+        if itemDescription.text?.isEmpty == false && itemQty.text?.isEmpty == true {
+            itemDescription.text = date[0]
+            itemQty.text = date[1]
+        } else {
+            itemDescription.text = date[0]
+        }
+        
     }
     
 }

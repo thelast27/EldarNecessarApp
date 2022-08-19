@@ -25,7 +25,6 @@ class ItemsViewController: UIViewController {
     
     @objc func addItemAction(_ sender: Any) {
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController else { return }
-        
             vc.itemsClosure = { [ weak self ] items in
                 self?.arrayWithItems.insert(items, at: 0)
                 self?.itemListTableView.reloadData()
