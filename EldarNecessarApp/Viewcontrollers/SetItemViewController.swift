@@ -28,7 +28,7 @@ class SetItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         qtyItemsStepper.wraps = false
         qtyItemsStepper.autorepeat = true
         categoryPickerView.delegate = self
@@ -54,9 +54,9 @@ class SetItemViewController: UIViewController {
               let name = itemName.text
         else { return }
         
-        guard itemDescrip != nil, itemQtyLabel != nil else { return }
-        otherItemDetails.append(itemQtyLabel.text ?? "0")
-        otherItemDetails.append(itemDescrip.text ?? "0")
+        guard let descr = itemDescrip.text, let qty = itemQtyLabel.text else { return }
+        otherItemDetails.append(descr)
+        otherItemDetails.append(qty)
         itemsClosure?(name)
         itemsDetailsClosure?(otherItemDetails)
         
