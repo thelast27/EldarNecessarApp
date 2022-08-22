@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
+
+class Trips: Object {
+    @objc dynamic var tripName = ""
+}
 
 class SetTripViewController: UIViewController {
     
+    let realm = try! Realm()
     let fileManager = FileManager.default
     
     @IBOutlet weak var tripName: UITextField!
@@ -19,10 +25,11 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     
     var documentsURL: URL!
-    typealias SendTripsDataClosure = (String) -> ()
+    typealias SendTripsDataClosure = (Trips) -> ()
     typealias SendPicsForTripClosure = (URL) -> ()
     var tripsClosure: SendTripsDataClosure?
     var picsClosure: SendPicsForTripClosure?
+    var trips: Results<Trips>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +42,12 @@ class SetTripViewController: UIViewController {
         guard tripName.hasText,
               let textForCell = tripName.text
         else { return }
-        tripsClosure?(textForCell)
+        let trip = Trips()
+        trip.tripName = textForCell
+        try! self.realm.write {
+            self.realm.add(trip)
+        }
+        tripsClosure?(trip)
        dismiss(animated: true)
     }
     
@@ -52,6 +64,10 @@ class SetTripViewController: UIViewController {
     }
     @IBAction func returnDate(_ sender: Any) {
         durationCalculation()
+    }
+    
+    func getRealmData() -> Results<Trips> {
+        return realm.objects(Trips.self)
     }
     
     fileprivate func durationCalculation() {
