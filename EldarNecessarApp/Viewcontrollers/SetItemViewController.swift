@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import RealmSwift
+
+class ItemsForTrip: Object {
+    @objc dynamic var itemName: String = ""
+    @objc dynamic var itemDescription: String = ""
+    @objc dynamic var itemQty: Int = 0
+}
 
 class SetItemViewController: UIViewController {
     
-    
+    let realm = try! Realm()
     let categoryPickerView = UIPickerView()
     
     @IBOutlet weak var itemQtyLabel: UILabel!
@@ -21,8 +28,8 @@ class SetItemViewController: UIViewController {
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     var otherItemDetails: [String] = []
-    typealias SendItemName = (String) -> ()
-    var itemsClosure: SendItemName?
+    typealias SendItemInfo = (ItemsForTrip) -> ()
+    var itemsClosure: SendItemInfo?
     typealias SendItemDetails = ([String]) -> ()
     var itemsDetailsClosure: SendItemDetails?
     
@@ -43,7 +50,9 @@ class SetItemViewController: UIViewController {
         itemQtyLabel.text = Int(sender.value).description
     }
     
-    
+    func getRealmDataWithItems() -> Results<ItemsForTrip> {
+        return realm.objects(ItemsForTrip.self)
+    }
     
     @IBAction func cancelSetItem(_ sender: Any) {
         dismiss(animated: true)
@@ -57,7 +66,14 @@ class SetItemViewController: UIViewController {
         guard let descr = itemDescrip.text, let qty = itemQtyLabel.text else { return }
         otherItemDetails.append(descr)
         otherItemDetails.append(qty)
-        itemsClosure?(name)
+        let items = ItemsForTrip()
+        items.itemName = name
+        items.itemDescription = descr
+        items.itemQty = Int(qty)!
+        try! self.realm.write {
+            realm.add(items)
+        }
+        itemsClosure?(items)
         itemsDetailsClosure?(otherItemDetails)
         
         dismiss(animated: true)

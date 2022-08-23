@@ -6,27 +6,32 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ItemsViewController: UIViewController {
     
+    let realm = try! Realm()
     
     @IBOutlet weak var itemListTableView: UITableView!
     var arrayWithItems: [String] = []
     var otherItemDetails: [String]?
+    var vcWithRealm = SetItemViewController()
+    var resultsRealmDataWithItem: Results<ItemsForTrip>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))
         itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
+        resultsRealmDataWithItem = vcWithRealm.getRealmDataWithItems()
+        itemListTableView.reloadData()
     }
     
     
     @objc func addItemAction(_ sender: Any) {
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController else { return }
             vc.itemsClosure = { [ weak self ] items in
-                self?.arrayWithItems.insert(items, at: 0)
+//                self?.arrayWithItems.insert(items, at: 0)
                 self?.itemListTableView.reloadData()
             }
             vc.itemsDetailsClosure = { [ weak self ] details in
@@ -42,14 +47,16 @@ class ItemsViewController: UIViewController {
 
 extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayWithItems.count
+        return resultsRealmDataWithItem.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.key, for: indexPath) as? ItemTableViewCell, let details = otherItemDetails else { return UITableViewCell() }
-            cell.itemName.text = arrayWithItems[indexPath.row]
-            cell.updateLabels(date: details)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.key, for: indexPath) as? ItemTableViewCell else { return UITableViewCell() }
+        let items = resultsRealmDataWithItem[indexPath.row]
+        cell.itemName.text = items.itemName
+        cell.itemDescription.text = items.itemDescription
+        cell.itemQty.text = "\(items.itemQty)"
             return cell
     }
     
@@ -65,4 +72,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     //        }
     //
     //}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+    }
 }
