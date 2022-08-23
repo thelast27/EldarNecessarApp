@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-c5-jQU">
-                        <rect key="frame" x="5" y="12" width="148" height="21"/>
+                        <rect key="frame" x="5" y="5" width="148" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,13 +29,19 @@
                             <constraint firstAttribute="width" constant="159" id="fop-02-SEe"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aDc-qi-2Ol">
+                        <rect key="frame" x="17" y="27" width="125" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="KNM-c5-jQU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1e3-n6-Qzs"/>
-                    <constraint firstAttribute="bottom" secondItem="KNM-c5-jQU" secondAttribute="bottom" constant="11" id="BiW-1m-Vp3"/>
                     <constraint firstAttribute="bottom" secondItem="J1B-4G-ghp" secondAttribute="bottom" id="EAR-0g-rqI"/>
                     <constraint firstItem="J1B-4G-ghp" firstAttribute="leading" secondItem="KNM-c5-jQU" secondAttribute="trailing" constant="8" id="V3z-IH-iCx"/>
-                    <constraint firstItem="KNM-c5-jQU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="asX-JI-PoZ"/>
+                    <constraint firstItem="KNM-c5-jQU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="asX-JI-PoZ"/>
                     <constraint firstAttribute="trailing" secondItem="J1B-4G-ghp" secondAttribute="trailing" id="e8l-et-Ccq"/>
                     <constraint firstItem="J1B-4G-ghp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mnc-aK-sOC"/>
                 </constraints>
@@ -43,6 +49,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="tripName" destination="KNM-c5-jQU" id="Hgd-vZ-TJY"/>
+                <outlet property="tripNotes" destination="aDc-qi-2Ol" id="9d6-hc-8PQ"/>
                 <outlet property="tripPhoto" destination="J1B-4G-ghp" id="GTc-0o-Dcg"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>

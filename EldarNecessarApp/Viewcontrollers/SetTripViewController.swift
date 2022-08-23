@@ -10,6 +10,7 @@ import RealmSwift
 
 class Trips: Object {
     @objc dynamic var tripName = ""
+    @objc dynamic var tripNotes = ""
 }
 
 class SetTripViewController: UIViewController {
@@ -42,10 +43,13 @@ class SetTripViewController: UIViewController {
         guard tripName.hasText,
               let textForCell = tripName.text
         else { return }
+        guard let tripNotes = tripNotes.text else { return }
         let trip = Trips()
         trip.tripName = textForCell
+        trip.tripNotes = tripNotes
         try! self.realm.write {
             self.realm.add(trip)
+
         }
         tripsClosure?(trip)
        dismiss(animated: true)

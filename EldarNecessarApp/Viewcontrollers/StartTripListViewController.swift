@@ -17,7 +17,6 @@ class StartTripListViewController: UIViewController {
     
     var arrayWithTrips: [String] = []
     var contentOfDirectory: [URL] = []
-//    var trips: [Trips] = []
     var resultsRealmData: Results<Trips>!
     var vcWithRealm = SetTripViewController()
     
@@ -32,7 +31,7 @@ class StartTripListViewController: UIViewController {
     @IBAction func addTrip(_ sender: Any) {
         if let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController") as? SetTripViewController {
             VC.tripsClosure = { [ weak self ] text in
-//                self?.trips.insert(text, at: 0)
+
                 self?.tripListTableView.reloadData()
             }
             VC.picsClosure = { [ weak self ] pics in

@@ -25,6 +25,7 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
         let trip = resultsRealmData[indexPath.row]
         cell.tripName.text = trip.tripName
+        cell.tripNotes.text = trip.tripNotes
         return cell
     }
     
