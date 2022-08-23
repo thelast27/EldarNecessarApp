@@ -22,25 +22,29 @@ class StartTripListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.white
+        self.navigationItem.title = "Trips list"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTripAction))
         tripListTableView.register(UINib(nibName: "TripTableViewCell", bundle: nil), forCellReuseIdentifier: TripTableViewCell.key)
        resultsRealmData = vcWithRealm.getRealmData()
+        
     }
 
-    
+        
+        @objc func addTripAction(_ sender: Any) {
+            if let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController") as? SetTripViewController {
+                VC.tripsClosure = { [ weak self ] text in
 
-    @IBAction func addTrip(_ sender: Any) {
-        if let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController") as? SetTripViewController {
-            VC.tripsClosure = { [ weak self ] text in
-
-                self?.tripListTableView.reloadData()
-            }
-            VC.picsClosure = { [ weak self ] pics in
-                self?.contentOfDirectory.insert(pics, at: 0)
-                self?.tripListTableView.reloadData()
-            }
-            present(VC, animated: true)
+                    self?.tripListTableView.reloadData()
+                }
+                VC.picsClosure = { [ weak self ] pics in
+                    self?.contentOfDirectory.insert(pics, at: 0)
+                    self?.tripListTableView.reloadData()
+                }
+                present(VC, animated: true)
         }
-     
     }
     
 }
