@@ -38,10 +38,8 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            if let item = resultsRealmData?[indexPath.row] {
-                try! realm.write {
-                    realm.delete(item)
-                }
+            if let trip = resultsRealmData?[indexPath.row] {
+                realmManager.deleteTripFromRealm(data: trip)
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }
         }

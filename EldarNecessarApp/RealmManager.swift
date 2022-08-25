@@ -30,7 +30,13 @@ class RealmManager {
     }
     
     func getItemDataFromRealm() -> Results<ItemsForTrip> {
-          return realm.objects(ItemsForTrip.self)
-      }
+        return realm.objects(ItemsForTrip.self)
+    }
+    
+    func deleteTripFromRealm(data: Trips) {
+        try! realm.write {
+            realm.delete(data)
+        }
+    }
     
 }
