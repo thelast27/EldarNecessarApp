@@ -18,6 +18,7 @@ class Trips: Object {
 
 
 class ItemsForTrip: Object {
+    @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var itemName: String = ""
     @Persisted var itemDescription: String = ""
     @Persisted var itemQty: Int = 0
