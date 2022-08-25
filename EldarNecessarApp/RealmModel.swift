@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Trips: Object {
+    @objc dynamic var tripName = ""
+    @objc dynamic var tripNotes = ""
+}
