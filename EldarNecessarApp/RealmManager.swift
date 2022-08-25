@@ -19,7 +19,18 @@ class RealmManager {
         }
     }
     
+    func writeItemDataToRealm(data: ItemsForTrip) {
+        try! self.realm.write {
+            self.realm.add(data)
+        }
+    }
+    
     func getTripDataFromRealm() -> Results<Trips> {
         return realm.objects(Trips.self)
     }
+    
+    func getItemDataFromRealm() -> Results<ItemsForTrip> {
+          return realm.objects(ItemsForTrip.self)
+      }
+    
 }
