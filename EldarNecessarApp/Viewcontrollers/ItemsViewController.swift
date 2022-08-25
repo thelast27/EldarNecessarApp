@@ -15,15 +15,15 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var itemListTableView: UITableView!
     var arrayWithItems: [String] = []
     var otherItemDetails: [String]?
-    var vcWithRealm = SetItemViewController()
     var resultsRealmDataWithItem: Results<ItemsForTrip>!
+    var realmManager = RealmManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))
         itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
-        resultsRealmDataWithItem = vcWithRealm.getRealmDataWithItems()
+        resultsRealmDataWithItem = realmManager.getItemDataFromRealm()
         itemListTableView.reloadData()
     }
     
