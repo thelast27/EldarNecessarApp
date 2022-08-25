@@ -9,13 +9,16 @@ import Foundation
 import RealmSwift
 
 class Trips: Object {
-    @objc dynamic var tripName = ""
-    @objc dynamic var tripNotes = ""
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var tripName: String = ""
+    @Persisted var tripNotes: String = ""
+    @Persisted var items = List<ItemsForTrip>()
+    
 }
 
 
 class ItemsForTrip: Object {
-    @objc dynamic var itemName: String = ""
-    @objc dynamic var itemDescription: String = ""
-    @objc dynamic var itemQty: Int = 0
+    @Persisted var itemName: String = ""
+    @Persisted var itemDescription: String = ""
+    @Persisted var itemQty: Int = 0
 }
