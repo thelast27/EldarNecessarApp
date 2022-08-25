@@ -75,8 +75,6 @@ extension SetItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return 1
     }
     
-    
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return categoryPickerArray.count
     }

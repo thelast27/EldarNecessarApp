@@ -26,7 +26,6 @@ class SetTripViewController: UIViewController {
     typealias SendPicsForTripClosure = (URL) -> ()
     var tripsClosure: SendTripsDataClosure?
     var picsClosure: SendPicsForTripClosure?
-//    var trips: Results<Trips>!
     var realmManager = RealmManager()
     
     override func viewDidLoad() {
