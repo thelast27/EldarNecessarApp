@@ -18,7 +18,7 @@ class StartTripListViewController: UIViewController {
     var arrayWithTrips: [String] = []
     var contentOfDirectory: [URL] = []
     var resultsRealmData: Results<Trips>!
-    var vcWithRealm = SetTripViewController()
+    var realmManager = RealmManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,7 @@ class StartTripListViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTripAction))
         tripListTableView.register(UINib(nibName: "TripTableViewCell", bundle: nil), forCellReuseIdentifier: TripTableViewCell.key)
-       resultsRealmData = vcWithRealm.getRealmData()
-        
+        resultsRealmData = realmManager.getTripDataFromRealm()
     }
 
         

@@ -12,6 +12,9 @@
 		4D070ADF28A28D0400FA7102 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */; };
 		4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */; };
 		4D070AE428A2901800FA7102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D070AE228A2901800FA7102 /* Main.storyboard */; };
+		4D08D3B128B77F3100B2A359 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D08D3B028B77F3100B2A359 /* Realm */; };
+		4D08D3B328B77F3100B2A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D08D3B228B77F3100B2A359 /* RealmSwift */; };
+		4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B428B7818E00B2A359 /* RealmManager.swift */; };
 		4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */; };
 		4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */; };
 		4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */; };
@@ -22,8 +25,6 @@
 		4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28828A282AA00E829B3 /* Assets.xcassets */; };
 		4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */; };
 		4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44E39A28A38CC8004D936E /* SetTripViewController.swift */; };
-		4D8EF20B28B124B200DC7B15 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8EF20A28B124B200DC7B15 /* Realm */; };
-		4D8EF20D28B124B200DC7B15 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8EF20C28B124B200DC7B15 /* RealmSwift */; };
 		4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTripListViewController.swift; sourceTree = "<group>"; };
 		4D070AE328A2901800FA7102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D08D3B428B7818E00B2A359 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
 		4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = EldarNecessarApp/Viewcontrollers/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
 		4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetItemViewController.swift; path = EldarNecessarApp/Viewcontrollers/SetItemViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -53,8 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D8EF20D28B124B200DC7B15 /* RealmSwift in Frameworks */,
-				4D8EF20B28B124B200DC7B15 /* Realm in Frameworks */,
+				4D08D3B328B77F3100B2A359 /* RealmSwift in Frameworks */,
+				4D08D3B128B77F3100B2A359 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,7 @@
 				4DD40BE028A518FC001A0F4F /* Extensions */,
 				4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */,
 				4D3AA28D28A282AA00E829B3 /* Info.plist */,
+				4D08D3B428B7818E00B2A359 /* RealmManager.swift */,
 			);
 			path = EldarNecessarApp;
 			sourceTree = "<group>";
@@ -166,8 +169,8 @@
 			);
 			name = EldarNecessarApp;
 			packageProductDependencies = (
-				4D8EF20A28B124B200DC7B15 /* Realm */,
-				4D8EF20C28B124B200DC7B15 /* RealmSwift */,
+				4D08D3B028B77F3100B2A359 /* Realm */,
+				4D08D3B228B77F3100B2A359 /* RealmSwift */,
 			);
 			productName = EldarNecessarApp;
 			productReference = 4D3AA27C28A282A500E829B3 /* EldarNecessarApp.app */;
@@ -198,7 +201,7 @@
 			);
 			mainGroup = 4D3AA27328A282A400E829B3;
 			packageReferences = (
-				4D8EF20928B124B200DC7B15 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 4D3AA27D28A282A500E829B3 /* Products */;
 			projectDirPath = "";
@@ -232,6 +235,7 @@
 			files = (
 				4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */,
 				4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */,
+				4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */,
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
 				4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */,
 				4D070ADE28A28D0400FA7102 /* TripTableViewCell.swift in Sources */,
@@ -459,7 +463,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4D8EF20928B124B200DC7B15 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -470,14 +474,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4D8EF20A28B124B200DC7B15 /* Realm */ = {
+		4D08D3B028B77F3100B2A359 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D8EF20928B124B200DC7B15 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		4D8EF20C28B124B200DC7B15 /* RealmSwift */ = {
+		4D08D3B228B77F3100B2A359 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D8EF20928B124B200DC7B15 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

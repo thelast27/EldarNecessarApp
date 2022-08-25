@@ -8,10 +8,6 @@
 import UIKit
 import RealmSwift
 
-class Trips: Object {
-    @objc dynamic var tripName = ""
-    @objc dynamic var tripNotes = ""
-}
 
 class SetTripViewController: UIViewController {
     
@@ -30,7 +26,8 @@ class SetTripViewController: UIViewController {
     typealias SendPicsForTripClosure = (URL) -> ()
     var tripsClosure: SendTripsDataClosure?
     var picsClosure: SendPicsForTripClosure?
-    var trips: Results<Trips>!
+//    var trips: Results<Trips>!
+    var realmManager = RealmManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +44,7 @@ class SetTripViewController: UIViewController {
         let trip = Trips()
         trip.tripName = textForCell
         trip.tripNotes = tripNotes
-        try! self.realm.write {
-            self.realm.add(trip)
-
-        }
+        realmManager.writeTripDataToRealm(data: trip)
         tripsClosure?(trip)
        dismiss(animated: true)
     }
@@ -69,10 +63,7 @@ class SetTripViewController: UIViewController {
     @IBAction func returnDate(_ sender: Any) {
         durationCalculation()
     }
-    
-    func getRealmData() -> Results<Trips> {
-        return realm.objects(Trips.self)
-    }
+
     
     fileprivate func durationCalculation() {
         
