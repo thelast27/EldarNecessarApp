@@ -22,12 +22,13 @@ class SetItemViewController: UIViewController {
     
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
-    var otherItemDetails: [String] = []
+
     typealias SendItemInfo = (ItemsForTrip) -> ()
     var itemsClosure: SendItemInfo?
-    typealias SendItemDetails = ([String]) -> ()
-    var itemsDetailsClosure: SendItemDetails?
     var realmManager = RealmManager()
+    var trips = Trips()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,24 +52,25 @@ class SetItemViewController: UIViewController {
     }
     
     @IBAction func saveItem(_ sender: Any) {
+        
         guard itemName.hasText,
               let name = itemName.text
         else { return }
         
         guard let descr = itemDescrip.text, let qty = itemQtyLabel.text else { return }
-        otherItemDetails.append(descr)
-        otherItemDetails.append(qty)
+        
         let items = ItemsForTrip()
         items.itemName = name
         items.itemDescription = descr
         items.itemQty = Int(qty)!
-        realmManager.writeItemDataToRealm(data: items)
-        itemsClosure?(items)
-        itemsDetailsClosure?(otherItemDetails)
+        realmManager.writeItemDataToRealm(item: items, in: trips)
         
+        itemsClosure?(items)
+
         dismiss(animated: true)
+        }
     }
-}
+
 
 extension SetItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
