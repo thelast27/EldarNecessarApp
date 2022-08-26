@@ -11,7 +11,17 @@ import RealmSwift
 
 
 class RealmManager {
-    let realm = try! Realm()
+    
+    private let realmSchemaVersion: UInt64 = 2
+    
+     init() {}
+    
+lazy var realm: Realm = {
+        let config = Realm.Configuration(schemaVersion: realmSchemaVersion)
+        Realm.Configuration.defaultConfiguration = config
+        
+        return try! Realm()
+    }()
     
     func writeTripDataToRealm(data: Trips) {
         try! self.realm.write {
@@ -19,9 +29,9 @@ class RealmManager {
         }
     }
     
-    func writeItemDataToRealm(data: ItemsForTrip) {
-        try! self.realm.write {
-            self.realm.add(data)
+    func writeItemDataToRealm(item: ItemsForTrip, in trip: Trips) {
+     try! realm.write {
+         trip.items.append(item)
         }
     }
     
