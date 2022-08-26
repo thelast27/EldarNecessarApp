@@ -10,39 +10,45 @@ import RealmSwift
 
 class ItemsViewController: UIViewController {
     
-    let realm = try! Realm()
-    
     @IBOutlet weak var itemListTableView: UITableView!
-    var arrayWithItems: [String] = []
-    var otherItemDetails: [String]?
-    var resultsRealmDataWithItem: Results<ItemsForTrip>!
+    
+    typealias SendTripsID = (Trips) -> ()
+    
+    var resultsRealmDataWithItem: List<ItemsForTrip>!
+    var trips: Trips!
     var realmManager = RealmManager()
+    var id: ObjectId!
+    var sendTripsIdClosure: SendTripsID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))
         itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
-        resultsRealmDataWithItem = realmManager.getItemDataFromRealm()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        trips = realmManager.realm.object(ofType: Trips.self, forPrimaryKey: id)
+        sendTripsIdClosure?(trips)
+        resultsRealmDataWithItem = trips.items
+        
         itemListTableView.reloadData()
     }
     
     
     @objc func addItemAction(_ sender: Any) {
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController else { return }
-            vc.itemsClosure = { [ weak self ] items in
-//                self?.arrayWithItems.insert(items, at: 0)
-                self?.itemListTableView.reloadData()
-            }
-            vc.itemsDetailsClosure = { [ weak self ] details in
-                self?.otherItemDetails = details
-                self?.itemListTableView.reloadData()
-            }
-            let navigationVC = UINavigationController(rootViewController: vc)
-            present(navigationVC, animated: true)
+        vc.itemsClosure = { [ weak self ] items in
+            self?.itemListTableView.reloadData()
         }
+        vc.trips = trips
         
+        let navigationVC = UINavigationController(rootViewController: vc)
+        present(navigationVC, animated: true)
     }
+    
+}
 
 
 extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -57,22 +63,11 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.itemName.text = items.itemName
         cell.itemDescription.text = items.itemDescription
         cell.itemQty.text = "\(items.itemQty)"
-            return cell
+        return cell
     }
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        let viewController = UIStoryboard(name: "ItemsList", bundle: nil)
-    //        if let VC = viewController.instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController {
-    //            VC.itemsClosure = { [ weak self ] items in
-    //                self?.arrayWithItems = items
-    //                self?.itemListTableView.reloadData()
-    //            }
-    //            let navigationVC = UINavigationController(rootViewController: VC)
-    //            present(navigationVC, animated: true)
-    //        }
-    //
-    //}
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     
+        
     }
 }
