@@ -31,6 +31,8 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "ItemsVC") as? ItemsViewController else { return }
+        vc.id = resultsRealmData[indexPath.row]._id
+        vc.title = resultsRealmData[indexPath.row].tripName
         navigationController?.pushViewController(vc, animated: true)
         
     }
