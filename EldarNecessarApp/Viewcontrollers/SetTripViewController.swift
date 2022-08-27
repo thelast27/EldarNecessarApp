@@ -6,12 +6,10 @@
 //
 
 import UIKit
-import RealmSwift
 
 
 class SetTripViewController: UIViewController {
     
-    let realm = try! Realm()
     let fileManager = FileManager.default
     
     @IBOutlet weak var tripName: UITextField!

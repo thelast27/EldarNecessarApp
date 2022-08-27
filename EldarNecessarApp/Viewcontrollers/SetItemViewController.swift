@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
-
 
 
 class SetItemViewController: UIViewController {
