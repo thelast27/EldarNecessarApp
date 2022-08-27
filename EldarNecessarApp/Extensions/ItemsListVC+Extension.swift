@@ -21,11 +21,20 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.itemName.text = items.itemName
         cell.itemDescription.text = items.itemDescription
         cell.itemQty.text = "\(items.itemQty)"
+        if items.isPacked == true {
+            cell.checkMark.isHidden = false
+        } else {
+            cell.checkMark.isHidden = true
+        }
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let items = resultsRealmDataWithItem[indexPath.row]
+        realmManager.writeItemIsPackedDataToRealm(item: items, in: trips)
+        tableView.reloadData()
         
     }
+   
 }
