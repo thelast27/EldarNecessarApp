@@ -31,13 +31,11 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let items = resultsRealmDataWithItem[indexPath.row]
-        //        realmManager.writeItemIsPackedDataToRealm(item: items, in: trips)
-        //        tableView.reloadData()
         
-        //        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return
-        
-        //            self?.navigationController?.pushViewController(vc, animated: true)
+        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return }
+                    vc.titleForTop = resultsRealmDataWithItem[indexPath.row].itemName
+        vc.items = resultsRealmDataWithItem[indexPath.row]
+                    navigationController?.pushViewController(vc, animated: true)
         
     }
     

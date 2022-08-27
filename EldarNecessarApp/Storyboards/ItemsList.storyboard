@@ -247,6 +247,9 @@
                     </view>
                     <connections>
                         <outlet property="categoryTextField" destination="7vd-GR-lQN" id="epi-Es-9tp"/>
+                        <outlet property="itemDescrip" destination="0Qf-08-Yar" id="n07-rQ-qoY"/>
+                        <outlet property="itemName" destination="RzN-0w-Tou" id="hz1-8U-duG"/>
+                        <outlet property="itemQty" destination="a9d-E9-8az" id="EQn-Em-eIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joN-et-k1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
