@@ -20,10 +20,10 @@ class SetItemViewController: UIViewController {
     
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
-
+    
     typealias SendItemInfo = (ItemsForTrip) -> Void
     var itemsClosure: SendItemInfo?
-    var realmManager = RealmManager()
+    private  var realmManager = RealmManager()
     var trips = Trips()
     
     
@@ -64,10 +64,10 @@ class SetItemViewController: UIViewController {
         realmManager.writeItemDataToRealm(item: items, in: trips)
         
         itemsClosure?(items)
-
+        
         dismiss(animated: true)
-        }
     }
+}
 
 
 extension SetItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {

@@ -15,8 +15,8 @@ class ItemsViewController: UIViewController {
     typealias SendTripsID = (Trips) -> Void
     
     var resultsRealmDataWithItem: List<ItemsForTrip>!
-    var trips: Trips!
-    var realmManager = RealmManager()
+    private var trips: Trips!
+    private var realmManager = RealmManager()
     var id: ObjectId!
     var sendTripsIdClosure: SendTripsID?
     
