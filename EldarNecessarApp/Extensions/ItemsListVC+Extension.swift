@@ -31,27 +31,48 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //        let items = resultsRealmDataWithItem[indexPath.row]
+        //        realmManager.writeItemIsPackedDataToRealm(item: items, in: trips)
+        //        tableView.reloadData()
+        
+        //        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return
+        
+        //            self?.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let items = resultsRealmDataWithItem[indexPath.row]
-        realmManager.writeItemIsPackedDataToRealm(item: items, in: trips)
-        tableView.reloadData()
-        
+        if items.isPacked == false {
+            let doCheckMark = UIContextualAction(style: .normal, title: "Check") { [weak self] (action, view, completionHandler) in
+                
+                guard let items = self?.resultsRealmDataWithItem[indexPath.row] else { return }
+                self?.realmManager.writeItemIsPackedDataToRealm(item: items, in: self?.trips ?? Trips.init())
+                tableView.reloadData()
+                completionHandler(true)
+            }
+            doCheckMark.backgroundColor = .systemGreen
+            
+            return UISwipeActionsConfiguration(actions: [doCheckMark])
+            
+        } else {
+            let doUnCheckMark = UIContextualAction(style: .normal,  title: "Unheck") { [weak self] (action, view, completionHandler) in
+                
+                guard let items = self?.resultsRealmDataWithItem[indexPath.row] else { return }
+                self?.realmManager.writeItemIsPackedDataToRealm(item: items, in: self?.trips ?? Trips.init())
+                tableView.reloadData()
+                completionHandler(true)
+            }
+            doUnCheckMark.backgroundColor = .systemBlue
+            
+            return UISwipeActionsConfiguration(actions: [doUnCheckMark])  }
     }
-    
-    
-    func tableView(_ tableView: UITableView,
-                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    
-        
-        let edit = UIContextualAction(style: .normal,
-                                         title: "Edit") { [weak self] (action, view, completionHandler) in
-            guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return }
-            self?.navigationController?.pushViewController(vc, animated: true)
-                                            completionHandler(true)
-        }
-        edit.backgroundColor = .systemGreen
-        
-        return UISwipeActionsConfiguration(actions: [edit])  }
-    
-    }
-   
+}
+
+
+
+
+
+
 
