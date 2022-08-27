@@ -36,5 +36,22 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.reloadData()
         
     }
+    
+    
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+        
+        let edit = UIContextualAction(style: .normal,
+                                         title: "Edit") { [weak self] (action, view, completionHandler) in
+            guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return }
+            self?.navigationController?.pushViewController(vc, animated: true)
+                                            completionHandler(true)
+        }
+        edit.backgroundColor = .systemGreen
+        
+        return UISwipeActionsConfiguration(actions: [edit])  }
+    
+    }
    
-}
+
