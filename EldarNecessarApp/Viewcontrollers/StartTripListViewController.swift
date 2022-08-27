@@ -13,7 +13,6 @@ class StartTripListViewController: UIViewController {
     
     @IBOutlet weak var tripListTableView: UITableView!
     
-    let realm = try! Realm()
     
     var arrayWithTrips: [String] = []
     var contentOfDirectory: [URL] = []
