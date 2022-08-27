@@ -12,12 +12,13 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     @IBOutlet weak var itemQty: UILabel!
+    @IBOutlet weak var checkMark: UIImageView!
     
     static var key = "ItemTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        checkMark.isHidden = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
