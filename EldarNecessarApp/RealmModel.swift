@@ -22,4 +22,5 @@ class ItemsForTrip: Object {
     @Persisted var itemName: String = ""
     @Persisted var itemDescription: String = ""
     @Persisted var itemQty: Int = 0
+    @Persisted var isPacked: Bool = false
 }
