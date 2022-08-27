@@ -12,6 +12,16 @@
 		4D070ADF28A28D0400FA7102 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */; };
 		4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */; };
 		4D070AE428A2901800FA7102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D070AE228A2901800FA7102 /* Main.storyboard */; };
+		4D08D3B128B77F3100B2A359 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D08D3B028B77F3100B2A359 /* Realm */; };
+		4D08D3B328B77F3100B2A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D08D3B228B77F3100B2A359 /* RealmSwift */; };
+		4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B428B7818E00B2A359 /* RealmManager.swift */; };
+		4D08D3B728B7840700B2A359 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B628B7840700B2A359 /* RealmModel.swift */; };
+		4D11C85228BA167D008569F7 /* ItemsListVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */; };
+		4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */; };
+		4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */; };
+		4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */; };
+		4D1EE88E28ABC62A003F6EA9 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88C28ABC629003F6EA9 /* ItemTableViewCell.swift */; };
+		4D1EE88F28ABC62A003F6EA9 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88D28ABC629003F6EA9 /* ItemTableViewCell.xib */; };
 		4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA27F28A282A500E829B3 /* AppDelegate.swift */; };
 		4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA28128A282A500E829B3 /* SceneDelegate.swift */; };
 		4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28828A282AA00E829B3 /* Assets.xcassets */; };
@@ -26,6 +36,14 @@
 		4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTripListViewController.swift; sourceTree = "<group>"; };
 		4D070AE328A2901800FA7102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D08D3B428B7818E00B2A359 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		4D08D3B628B7840700B2A359 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsListVC+Extension.swift"; sourceTree = "<group>"; };
+		4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
+		4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = EldarNecessarApp/Viewcontrollers/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
+		4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetItemViewController.swift; path = EldarNecessarApp/Viewcontrollers/SetItemViewController.swift; sourceTree = SOURCE_ROOT; };
+		4D1EE88C28ABC629003F6EA9 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		4D1EE88D28ABC629003F6EA9 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		4D3AA27C28A282A500E829B3 /* EldarNecessarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldarNecessarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3AA27F28A282A500E829B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3AA28128A282A500E829B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D08D3B328B77F3100B2A359 /* RealmSwift in Frameworks */,
+				4D08D3B128B77F3100B2A359 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,14 +88,15 @@
 			children = (
 				4D3AA27F28A282A500E829B3 /* AppDelegate.swift */,
 				4D3AA28128A282A500E829B3 /* SceneDelegate.swift */,
-				4D070ADC28A28D0400FA7102 /* TripTableViewCell.swift */,
-				4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */,
+				4D6682BE28AFD3B600BB20C3 /* Cells */,
 				4D44E39F28A38E58004D936E /* Viewcontrollers */,
 				4D44E39E28A38E4A004D936E /* Storyboards */,
 				4D3AA28828A282AA00E829B3 /* Assets.xcassets */,
 				4DD40BE028A518FC001A0F4F /* Extensions */,
 				4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */,
 				4D3AA28D28A282AA00E829B3 /* Info.plist */,
+				4D08D3B428B7818E00B2A359 /* RealmManager.swift */,
+				4D08D3B628B7840700B2A359 /* RealmModel.swift */,
 			);
 			path = EldarNecessarApp;
 			sourceTree = "<group>";
@@ -84,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				4D070AE228A2901800FA7102 /* Main.storyboard */,
+				4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -93,8 +115,37 @@
 			children = (
 				4D070AE028A2900B00FA7102 /* StartTripListViewController.swift */,
 				4D44E39A28A38CC8004D936E /* SetTripViewController.swift */,
+				4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */,
+				4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */,
 			);
 			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		4D6682BC28AFD39400BB20C3 /* ItemListTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D1EE88C28ABC629003F6EA9 /* ItemTableViewCell.swift */,
+				4D1EE88D28ABC629003F6EA9 /* ItemTableViewCell.xib */,
+			);
+			path = ItemListTableView;
+			sourceTree = "<group>";
+		};
+		4D6682BD28AFD3A800BB20C3 /* TripListTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D070ADC28A28D0400FA7102 /* TripTableViewCell.swift */,
+				4D070ADD28A28D0400FA7102 /* TripTableViewCell.xib */,
+			);
+			path = TripListTableView;
+			sourceTree = "<group>";
+		};
+		4D6682BE28AFD3B600BB20C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4D6682BD28AFD3A800BB20C3 /* TripListTableView */,
+				4D6682BC28AFD39400BB20C3 /* ItemListTableView */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4DD40BE028A518FC001A0F4F /* Extensions */ = {
@@ -102,6 +153,7 @@
 			children = (
 				4D070ADA28A28AC500FA7102 /* TripListVC+Extension.swift */,
 				4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */,
+				4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +174,10 @@
 			dependencies = (
 			);
 			name = EldarNecessarApp;
+			packageProductDependencies = (
+				4D08D3B028B77F3100B2A359 /* Realm */,
+				4D08D3B228B77F3100B2A359 /* RealmSwift */,
+			);
 			productName = EldarNecessarApp;
 			productReference = 4D3AA27C28A282A500E829B3 /* EldarNecessarApp.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +206,9 @@
 				Base,
 			);
 			mainGroup = 4D3AA27328A282A400E829B3;
+			packageReferences = (
+				4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 4D3AA27D28A282A500E829B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,9 +223,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */,
 				4D070AE428A2901800FA7102 /* Main.storyboard in Resources */,
 				4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */,
 				4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */,
+				4D1EE88F28ABC62A003F6EA9 /* ItemTableViewCell.xib in Resources */,
 				4D070ADF28A28D0400FA7102 /* TripTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,11 +240,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */,
+				4D08D3B728B7840700B2A359 /* RealmModel.swift in Sources */,
 				4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */,
+				4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */,
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
+				4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */,
 				4D070ADE28A28D0400FA7102 /* TripTableViewCell.swift in Sources */,
+				4D11C85228BA167D008569F7 /* ItemsListVC+Extension.swift in Sources */,
 				4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */,
+				4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */,
 				4D070ADB28A28AC500FA7102 /* TripListVC+Extension.swift in Sources */,
+				4D1EE88E28ABC62A003F6EA9 /* ItemTableViewCell.swift in Sources */,
 				4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +469,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D08D3B028B77F3100B2A359 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		4D08D3B228B77F3100B2A359 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D3AA27428A282A400E829B3 /* Project object */;
 }

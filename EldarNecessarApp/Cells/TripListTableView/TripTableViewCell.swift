@@ -10,6 +10,7 @@ import UIKit
 class TripTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tripName: UILabel!
+    @IBOutlet weak var tripNotes: UILabel!
     @IBOutlet weak var tripPhoto: UIImageView!
     
     
@@ -18,6 +19,7 @@ class TripTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         tripName.text = ""
+        tripNotes.text = ""
         
     }
 

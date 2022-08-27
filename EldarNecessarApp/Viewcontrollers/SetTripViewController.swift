@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SetTripViewController: UIViewController {
     
     let fileManager = FileManager.default
@@ -19,10 +20,11 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     
     var documentsURL: URL!
-    typealias SendTripsDataClosure = (String) -> ()
-    typealias SendPicsForTripClosure = (URL) -> ()
+    typealias SendTripsDataClosure = (Trips) -> Void
+    typealias SendPicsForTripClosure = (URL) -> Void
     var tripsClosure: SendTripsDataClosure?
     var picsClosure: SendPicsForTripClosure?
+   private var realmManager = RealmManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,12 @@ class SetTripViewController: UIViewController {
         guard tripName.hasText,
               let textForCell = tripName.text
         else { return }
-        tripsClosure?(textForCell)
+        guard let tripNotes = tripNotes.text else { return }
+        let trip = Trips()
+        trip.tripName = textForCell
+        trip.tripNotes = tripNotes
+        realmManager.writeTripDataToRealm(data: trip)
+        tripsClosure?(trip)
        dismiss(animated: true)
     }
     
@@ -53,6 +60,7 @@ class SetTripViewController: UIViewController {
     @IBAction func returnDate(_ sender: Any) {
         durationCalculation()
     }
+
     
     fileprivate func durationCalculation() {
         
