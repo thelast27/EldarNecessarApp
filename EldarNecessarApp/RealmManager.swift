@@ -14,7 +14,6 @@ class RealmManager {
     
     private let realmSchemaVersion: UInt64 = 2
     
-     init() {}
     
 lazy var realm: Realm = {
         let config = Realm.Configuration(schemaVersion: realmSchemaVersion)
