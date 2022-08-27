@@ -16,6 +16,7 @@
 		4D08D3B328B77F3100B2A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D08D3B228B77F3100B2A359 /* RealmSwift */; };
 		4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B428B7818E00B2A359 /* RealmManager.swift */; };
 		4D08D3B728B7840700B2A359 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B628B7840700B2A359 /* RealmModel.swift */; };
+		4D11C85228BA167D008569F7 /* ItemsListVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */; };
 		4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */; };
 		4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */; };
 		4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */; };
@@ -37,6 +38,7 @@
 		4D070AE328A2901800FA7102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D08D3B428B7818E00B2A359 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4D08D3B628B7840700B2A359 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsListVC+Extension.swift"; sourceTree = "<group>"; };
 		4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
 		4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = EldarNecessarApp/Viewcontrollers/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
 		4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetItemViewController.swift; path = EldarNecessarApp/Viewcontrollers/SetItemViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -151,6 +153,7 @@
 			children = (
 				4D070ADA28A28AC500FA7102 /* TripListVC+Extension.swift */,
 				4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */,
+				4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
 				4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */,
 				4D070ADE28A28D0400FA7102 /* TripTableViewCell.swift in Sources */,
+				4D11C85228BA167D008569F7 /* ItemsListVC+Extension.swift in Sources */,
 				4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */,
 				4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */,
 				4D070ADB28A28AC500FA7102 /* TripListVC+Extension.swift in Sources */,
