@@ -17,6 +17,7 @@
 		4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B428B7818E00B2A359 /* RealmManager.swift */; };
 		4D08D3B728B7840700B2A359 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D3B628B7840700B2A359 /* RealmModel.swift */; };
 		4D11C85228BA167D008569F7 /* ItemsListVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */; };
+		4D11C85428BA4134008569F7 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11C85328BA4134008569F7 /* EditItemViewController.swift */; };
 		4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */; };
 		4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */; };
 		4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */; };
@@ -39,6 +40,7 @@
 		4D08D3B428B7818E00B2A359 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4D08D3B628B7840700B2A359 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsListVC+Extension.swift"; sourceTree = "<group>"; };
+		4D11C85328BA4134008569F7 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 		4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsList.storyboard; sourceTree = "<group>"; };
 		4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = EldarNecessarApp/Viewcontrollers/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
 		4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetItemViewController.swift; path = EldarNecessarApp/Viewcontrollers/SetItemViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -117,6 +119,7 @@
 				4D44E39A28A38CC8004D936E /* SetTripViewController.swift */,
 				4D1EE88628AB8D0D003F6EA9 /* ItemsViewController.swift */,
 				4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */,
+				4D11C85328BA4134008569F7 /* EditItemViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */,
+				4D11C85428BA4134008569F7 /* EditItemViewController.swift in Sources */,
 				4D08D3B728B7840700B2A359 /* RealmModel.swift in Sources */,
 				4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */,
 				4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */,
