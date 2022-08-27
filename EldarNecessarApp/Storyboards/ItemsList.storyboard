@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jg9-9p-UF6">
-                                <rect key="frame" x="0.0" y="76" width="414" height="751"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jg9-9p-UF6">
+                                <rect key="frame" x="0.0" y="54" width="404" height="798"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="wdv-g8-iGn"/>
@@ -28,6 +27,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jg9-9p-UF6" secondAttribute="trailing" constant="10" id="9qY-uZ-Pe3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jg9-9p-UF6" secondAttribute="bottom" constant="10" id="MQY-1Z-Aio"/>
+                            <constraint firstItem="Jg9-9p-UF6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="czy-rF-wU8"/>
+                            <constraint firstItem="Jg9-9p-UF6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pcK-Tb-heB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="itemListTableView" destination="Jg9-9p-UF6" id="hQ2-ln-5tz"/>
@@ -145,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="76"/>
         </scene>
-        <!--Set Item View Controller-->
+        <!--Edit Item View Controller-->
         <scene sceneID="AVY-KM-gTi">
             <objects>
-                <viewController storyboardIdentifier="EditItemVC" id="Dzg-90-uOJ" customClass="SetItemViewController" customModule="EldarNecessarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditItemVC" id="Dzg-90-uOJ" customClass="EditItemViewController" customModule="EldarNecessarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LIw-D1-DPo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,9 +178,6 @@
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xJk-zg-qCt">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
-                                        <connections>
-                                            <action selector="qtyItemsStepperAction:" destination="Dzg-90-uOJ" eventType="valueChanged" id="a58-aS-8hc"/>
-                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-F2-GP1">
                                         <rect key="frame" x="109" y="0.0" width="50" height="32"/>
@@ -212,9 +214,6 @@
                                         <rect key="frame" x="0.0" y="84.5" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
-                                        <connections>
-                                            <action selector="saveItem:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="dwX-ep-BEk"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQk-dx-jbD">
                                         <rect key="frame" x="0.0" y="130.5" width="374" height="31"/>
@@ -223,17 +222,11 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="cancelSetItem:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="Zzt-Q8-0Xt"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-Cz-pcN">
                                         <rect key="frame" x="0.0" y="176.5" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
-                                        <connections>
-                                            <action selector="cancelSetItem:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="3WU-sH-Cs0"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -253,11 +246,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="categoryTextField" destination="7vd-GR-lQN" id="tJf-7t-eKk"/>
-                        <outlet property="itemDescrip" destination="0Qf-08-Yar" id="FH3-kz-o95"/>
-                        <outlet property="itemName" destination="RzN-0w-Tou" id="8A0-0n-vu9"/>
-                        <outlet property="itemQtyLabel" destination="a9d-E9-8az" id="RTj-T5-bt3"/>
-                        <outlet property="qtyItemsStepper" destination="xJk-zg-qCt" id="SzW-hg-QIb"/>
+                        <outlet property="categoryTextField" destination="7vd-GR-lQN" id="epi-Es-9tp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joN-et-k1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
