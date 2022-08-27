@@ -22,8 +22,8 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     
     var documentsURL: URL!
-    typealias SendTripsDataClosure = (Trips) -> ()
-    typealias SendPicsForTripClosure = (URL) -> ()
+    typealias SendTripsDataClosure = (Trips) -> Void
+    typealias SendPicsForTripClosure = (URL) -> Void
     var tripsClosure: SendTripsDataClosure?
     var picsClosure: SendPicsForTripClosure?
     var realmManager = RealmManager()

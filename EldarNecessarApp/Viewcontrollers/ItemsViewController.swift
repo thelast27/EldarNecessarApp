@@ -12,7 +12,7 @@ class ItemsViewController: UIViewController {
     
     @IBOutlet weak var itemListTableView: UITableView!
     
-    typealias SendTripsID = (Trips) -> ()
+    typealias SendTripsID = (Trips) -> Void
     
     var resultsRealmDataWithItem: List<ItemsForTrip>!
     var trips: Trips!

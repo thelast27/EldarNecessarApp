@@ -23,7 +23,7 @@ class SetItemViewController: UIViewController {
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
 
-    typealias SendItemInfo = (ItemsForTrip) -> ()
+    typealias SendItemInfo = (ItemsForTrip) -> Void
     var itemsClosure: SendItemInfo?
     var realmManager = RealmManager()
     var trips = Trips()
