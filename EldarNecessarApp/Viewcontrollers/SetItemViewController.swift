@@ -60,7 +60,7 @@ class SetItemViewController: UIViewController {
         let items = ItemsForTrip()
         items.itemName = name
         items.itemDescription = descr
-        items.itemQty = Int(qty)!
+        items.itemQty = Int(qty) ?? 0
         realmManager.writeItemDataToRealm(item: items, in: trips)
         
         itemsClosure?(items)
