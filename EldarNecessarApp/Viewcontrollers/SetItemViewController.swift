@@ -23,7 +23,7 @@ class SetItemViewController: UIViewController {
     
     typealias SendItemInfo = (ItemsForTrip) -> Void
     var itemsClosure: SendItemInfo?
-    private  var realmManager = RealmManager()
+    private var realmManager = RealmManager()
     var trips = Trips()
     
     
