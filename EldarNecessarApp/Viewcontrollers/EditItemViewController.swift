@@ -20,6 +20,8 @@ class EditItemViewController: UIViewController {
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     var titleForTop = ""
     var items: ItemsForTrip?
+    var trips = Trips()
+    private var realmManager = RealmManager()
     
     
     
@@ -50,7 +52,9 @@ class EditItemViewController: UIViewController {
     }
     
     @IBAction func deleteButton(_ sender: Any) {
-        
+        realmManager.deleteITemFromTrip(item: items!, from: trips) {
+            navigationController?.popViewController(animated: true)
+        }
     }
 }
 
