@@ -67,4 +67,12 @@ lazy var realm: Realm = {
         completion()
     }
     
+    func editItem(item: ItemsForTrip, in trip: Trips, updatedItems: ItemsForTrip, completion: completionHandler) {
+        try! realm.write {
+            trip.items.realm?.delete(item)
+            trip.items.append(updatedItems)
+        }
+        completion()
+    }
+    
 }
