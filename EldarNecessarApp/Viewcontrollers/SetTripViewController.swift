@@ -46,6 +46,11 @@ class SetTripViewController: UIViewController {
        dismiss(animated: true)
     }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    
     @IBAction func addPhoto(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -68,7 +73,7 @@ class SetTripViewController: UIViewController {
         let durationFromReturnDate = returnDate.calendar.dateComponents([.day, .month, .year], from: returnDate.date)
         let durationInDays = durationFromReturnDate.day! - durationFromDepartureDate.day!
         durationLabel.isHidden = false
-        durationLabel.text = "\(durationInDays) day(s)"
+        durationLabel.text = "Trip for \(durationInDays) day(s)"
         view.layoutIfNeeded()
         
     }
