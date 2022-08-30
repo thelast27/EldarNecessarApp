@@ -25,10 +25,11 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.title = ""
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))
-        itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
+
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
+                                              UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))]
         
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
         
         trips = realmManager.realm.object(ofType: Trips.self, forPrimaryKey: id)
         sendTripsIdClosure?(trips)
@@ -48,6 +49,12 @@ class ItemsViewController: UIViewController {
         }
         vc.trips = trips
         
+        let navigationVC = UINavigationController(rootViewController: vc)
+        present(navigationVC, animated: true)
+    }
+    
+    @objc func showMap(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "MapStoryboard", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
         let navigationVC = UINavigationController(rootViewController: vc)
         present(navigationVC, animated: true)
     }
