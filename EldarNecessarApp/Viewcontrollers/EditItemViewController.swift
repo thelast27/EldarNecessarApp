@@ -10,7 +10,7 @@ import UIKit
 class EditItemViewController: UIViewController {
     
     let categoryPickerView = UIPickerView()
-
+    
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemDescrip: UITextField!
     @IBOutlet weak var itemQty: UILabel!
@@ -22,6 +22,7 @@ class EditItemViewController: UIViewController {
     var items: ItemsForTrip?
     var trips = Trips()
     private var realmManager = RealmManager()
+    private var updatedItem = ItemsForTrip()
     
     
     
@@ -48,11 +49,33 @@ class EditItemViewController: UIViewController {
     
     
     @IBAction func qtyItemStepperAction(_ sender: UIStepper) {
-            itemQty.text = Int(sender.value).description //есть баг, что степпер считает с нуля, даже если лейба изначально 1 или 5, счет будет с нуля. 
+        itemQty.text = Int(sender.value).description //есть баг, что степпер считает с нуля, даже если лейба изначально 1 или 5, счет будет с нуля.
+    }
+    
+    @IBAction func saveEditedItem(_ sender: Any) {
+        
+        guard let name = itemName.text,
+              let qty = Int(itemQty.text ?? ""),
+              let descr = itemDescrip.text,
+              let items = items
+        else { return }
+        
+        if itemName.hasText == true {
+            updatedItem.itemName = name
+        }
+        
+        updatedItem.itemDescription = descr
+        updatedItem.itemQty = qty
+        realmManager.editItem(item: items, in: trips, updatedItems: updatedItem) {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func deleteButton(_ sender: Any) {
-        realmManager.deleteITemFromTrip(item: items!, from: trips) {
+        
+        guard let items = items else { return }
+        
+        realmManager.deleteITemFromTrip(item: items, from: trips) {
             navigationController?.popViewController(animated: true)
         }
     }
