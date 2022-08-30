@@ -14,6 +14,8 @@ class RealmManager {
     
     private let realmSchemaVersion: UInt64 = 2
     
+    typealias completionHandler = () -> Void
+    
     
 lazy var realm: Realm = {
         let config = Realm.Configuration(schemaVersion: realmSchemaVersion)
@@ -56,6 +58,13 @@ lazy var realm: Realm = {
         try! realm.write {
             realm.delete(data)
         }
+    }
+    
+    func deleteITemFromTrip(item: ItemsForTrip, from trip: Trips, completion: completionHandler) {
+        try! realm.write {
+            trip.items.realm?.delete(item)
+        }
+        completion()
     }
     
 }
