@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MapViewController: UIViewController {
 
+    @IBOutlet weak var viewForMap: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let camera = GMSCameraPosition.camera(withLatitude: 54.029, longitude: 27.597, zoom: 5.0)
+        let mapView = GMSMapView.map(withFrame: viewForMap.bounds, camera: camera)
+        mapView.delegate = self
+        viewForMap.addSubview(mapView)
     }
     
 
@@ -26,4 +31,8 @@ class MapViewController: UIViewController {
     }
     */
 
+}
+
+extension MapViewController: GMSMapViewDelegate {
+    
 }
