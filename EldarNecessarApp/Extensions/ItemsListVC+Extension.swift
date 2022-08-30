@@ -35,6 +35,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return }
                     vc.titleForTop = resultsRealmDataWithItem[indexPath.row].itemName
         vc.items = resultsRealmDataWithItem[indexPath.row]
+        vc.trips = trips
                     navigationController?.pushViewController(vc, animated: true)
         
     }
