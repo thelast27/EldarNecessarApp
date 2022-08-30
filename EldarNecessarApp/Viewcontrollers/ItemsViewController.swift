@@ -37,6 +37,9 @@ class ItemsViewController: UIViewController {
         itemListTableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        itemListTableView.reloadData()
+    }
     
     @objc func addItemAction(_ sender: Any) {
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController else { return }
