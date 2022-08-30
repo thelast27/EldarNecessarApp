@@ -28,6 +28,8 @@
 		4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28828A282AA00E829B3 /* Assets.xcassets */; };
 		4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */; };
 		4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44E39A28A38CC8004D936E /* SetTripViewController.swift */; };
+		4DA04AFA28BE5825001CCF25 /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */; };
+		4DA04AFC28BE5866001CCF25 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA04AFB28BE5866001CCF25 /* MapViewController.swift */; };
 		4DA8BE6728BE52DE0007E64D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8BE6628BE52DE0007E64D /* TabBarViewController.swift */; };
 		4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		4D3AA28B28A282AA00E829B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3AA28D28A282AA00E829B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D44E39A28A38CC8004D936E /* SetTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTripViewController.swift; sourceTree = "<group>"; };
+		4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
+		4DA04AFB28BE5866001CCF25 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4DA8BE6628BE52DE0007E64D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetTripVС+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,7 @@
 			children = (
 				4D070AE228A2901800FA7102 /* Main.storyboard */,
 				4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */,
+				4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				4D1EE88828AB9718003F6EA9 /* SetItemViewController.swift */,
 				4D11C85328BA4134008569F7 /* EditItemViewController.swift */,
 				4DA8BE6628BE52DE0007E64D /* TabBarViewController.swift */,
+				4DA04AFB28BE5866001CCF25 /* MapViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				4D1EE88528AB8CE4003F6EA9 /* ItemsList.storyboard in Resources */,
 				4D070AE428A2901800FA7102 /* Main.storyboard in Resources */,
 				4D3AA28C28A282AA00E829B3 /* LaunchScreen.storyboard in Resources */,
+				4DA04AFA28BE5825001CCF25 /* MapStoryboard.storyboard in Resources */,
 				4D3AA28928A282AA00E829B3 /* Assets.xcassets in Resources */,
 				4D1EE88F28ABC62A003F6EA9 /* ItemTableViewCell.xib in Resources */,
 				4D070ADF28A28D0400FA7102 /* TripTableViewCell.xib in Resources */,
@@ -276,6 +283,7 @@
 				4D1EE88E28ABC62A003F6EA9 /* ItemTableViewCell.swift in Sources */,
 				4DA8BE6728BE52DE0007E64D /* TabBarViewController.swift in Sources */,
 				4D3AA28228A282A500E829B3 /* SceneDelegate.swift in Sources */,
+				4DA04AFC28BE5866001CCF25 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
