@@ -15,6 +15,7 @@ class EditItemViewController: UIViewController {
     @IBOutlet weak var itemDescrip: UITextField!
     @IBOutlet weak var itemQty: UILabel!
     @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var qtyItemStepper: UIStepper!
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     var titleForTop = ""
@@ -27,6 +28,8 @@ class EditItemViewController: UIViewController {
         
         title = titleForTop
         
+        qtyItemStepper.wraps = false
+        qtyItemStepper.autorepeat = true
         categoryPickerView.delegate = self
         categoryPickerView.dataSource = self
         categoryTextField.inputView = categoryPickerView
@@ -41,6 +44,14 @@ class EditItemViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func qtyItemStepperAction(_ sender: UIStepper) {
+            itemQty.text = Int(sender.value).description
+    }
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        
+    }
 }
 
 extension EditItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {

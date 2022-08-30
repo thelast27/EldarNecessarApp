@@ -178,6 +178,9 @@
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xJk-zg-qCt">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="qtyItemStepperAction:" destination="Dzg-90-uOJ" eventType="valueChanged" id="D25-fE-1FM"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-F2-GP1">
                                         <rect key="frame" x="109" y="0.0" width="50" height="32"/>
@@ -222,6 +225,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="4QS-ZW-Huz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-Cz-pcN">
                                         <rect key="frame" x="0.0" y="176.5" width="374" height="31"/>
@@ -250,6 +256,7 @@
                         <outlet property="itemDescrip" destination="0Qf-08-Yar" id="n07-rQ-qoY"/>
                         <outlet property="itemName" destination="RzN-0w-Tou" id="hz1-8U-duG"/>
                         <outlet property="itemQty" destination="a9d-E9-8az" id="EQn-Em-eIW"/>
+                        <outlet property="qtyItemStepper" destination="xJk-zg-qCt" id="0gw-GP-2ue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joN-et-k1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
