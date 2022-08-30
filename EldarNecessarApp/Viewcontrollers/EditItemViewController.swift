@@ -46,7 +46,7 @@ class EditItemViewController: UIViewController {
     
     
     @IBAction func qtyItemStepperAction(_ sender: UIStepper) {
-            itemQty.text = Int(sender.value).description
+            itemQty.text = Int(sender.value).description //есть баг, что степпер считает с нуля, даже если лейба изначально 1 или 5, счет будет с нуля. 
     }
     
     @IBAction func deleteButton(_ sender: Any) {
