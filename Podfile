@@ -6,4 +6,5 @@ target 'EldarNecessarApp' do
   use_frameworks!
 
   pod 'GoogleMaps'
+  pod 'GooglePlaces', '7.1.0'
 end
