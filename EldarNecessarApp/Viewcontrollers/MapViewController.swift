@@ -18,6 +18,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(closeScreen))
+        
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: self.viewForMap.frame, camera: camera)
         self.viewForMap.addSubview(mapView)
@@ -32,7 +34,9 @@ class MapViewController: UIViewController {
         marker.map = mapView
     }
     
-    
+    @objc func closeScreen() {
+        dismiss(animated: true)
+    }
 
     
 }

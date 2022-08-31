@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-Ma-mAf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="699"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="503"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -26,8 +26,8 @@
                         <constraints>
                             <constraint firstItem="2gh-Ma-mAf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BWe-yS-aVP"/>
                             <constraint firstItem="2gh-Ma-mAf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="GZn-At-ocj"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2gh-Ma-mAf" secondAttribute="bottom" constant="163" id="Yhm-j9-18d"/>
-                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kgl-7H-ErO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2gh-Ma-mAf" secondAttribute="bottom" constant="325" id="Yhm-j9-18d"/>
+                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="34" id="kgl-7H-ErO"/>
                         </constraints>
                     </view>
                     <connections>
