@@ -38,13 +38,11 @@ lazy var realm: Realm = {
     
     func writeItemIsPackedDataToRealm(item: ItemsForTrip, in trip: Trips) {
         try! realm.write({
-            if item.isPacked == false {
-                item.isPacked = true
-            } else {
-                item.isPacked = false
-            }
+            item.isPacked.toggle()
         })
     }
+    
+    
     
     func getTripDataFromRealm() -> Results<Trips> {
         return realm.objects(Trips.self)
