@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ael-u7-TFN">
-                                <rect key="frame" x="66" y="343" width="283" height="31"/>
+                                <rect key="frame" x="324" y="490" width="80" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="add photo for trip"/>
@@ -76,26 +76,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-0M-q2P">
-                                <rect key="frame" x="30" y="190" width="354" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-hG-xQM">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-8t-hHK">
-                                        <rect key="frame" x="117" y="0.0" width="237" height="50"/>
-                                        <locale key="locale" localeIdentifier="en_UA"/>
-                                        <connections>
-                                            <action selector="getDateFromPicker:" destination="D30-0n-d1I" eventType="valueChanged" id="OaU-9r-eja"/>
-                                        </connections>
-                                    </datePicker>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-sD-3wt">
-                                <rect key="frame" x="30" y="227" width="354" height="50"/>
+                                <rect key="frame" x="30" y="359" width="354" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-9m-ddz">
                                         <rect key="frame" x="0.0" y="0.0" width="91" height="50"/>
@@ -134,7 +116,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRk-SF-hqV">
-                                <rect key="frame" x="30" y="285" width="354" height="0.0"/>
+                                <rect key="frame" x="30" y="373" width="354" height="0.0"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLJ-Uy-O9a">
                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
@@ -145,27 +127,62 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="82M-ak-pT3">
-                                <rect key="frame" x="129" y="383" width="156" height="136"/>
+                                <rect key="frame" x="252" y="490.5" width="64" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sFb-WF-0mS">
+                                <rect key="frame" x="30" y="202" width="354" height="92"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Search trip location" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Re-bdn">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOT-3i-HEw">
+                                        <rect key="frame" x="0.0" y="61" width="354" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system" title="Find on the map"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-0M-q2P">
+                                <rect key="frame" x="30" y="304" width="354" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-hG-xQM">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-8t-hHK">
+                                        <rect key="frame" x="117" y="0.0" width="237" height="50"/>
+                                        <locale key="locale" localeIdentifier="en_UA"/>
+                                        <connections>
+                                            <action selector="getDateFromPicker:" destination="D30-0n-d1I" eventType="valueChanged" id="OaU-9r-eja"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acd-mE-M2N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="h3A-ej-P6A" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="topMargin" constant="30" id="3at-w9-cAo"/>
                             <constraint firstItem="Swd-2f-EX0" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="41W-k9-0MU"/>
-                            <constraint firstItem="KQ4-sD-3wt" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="70" id="768-Uh-v6O"/>
+                            <constraint firstItem="Swd-2f-EX0" firstAttribute="top" secondItem="aRk-SF-hqV" secondAttribute="bottom" constant="307" id="5Qw-OT-Xqe"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="aRk-SF-hqV" secondAttribute="trailing" constant="30" id="8cm-cl-omW"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="Swd-2f-EX0" secondAttribute="trailing" constant="30" id="8jw-OI-xfr"/>
+                            <constraint firstItem="sFb-WF-0mS" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="45" id="9LU-io-m5E"/>
                             <constraint firstItem="h3A-ej-P6A" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="B5g-DB-h2r"/>
                             <constraint firstItem="aRk-SF-hqV" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="GCa-M4-5P6"/>
                             <constraint firstItem="KQ4-sD-3wt" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="H0c-qX-bV0"/>
                             <constraint firstItem="6TF-0M-q2P" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="JMa-P8-I0x"/>
-                            <constraint firstItem="6TF-0M-q2P" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="33" id="NLc-sP-mCD"/>
+                            <constraint firstItem="KQ4-sD-3wt" firstAttribute="top" secondItem="6TF-0M-q2P" secondAttribute="bottom" constant="5" id="NYT-e6-6n7"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Swd-2f-EX0" secondAttribute="bottom" constant="110" id="UwL-kn-7lK"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="KQ4-sD-3wt" secondAttribute="trailing" constant="30" id="d11-BY-MrT"/>
+                            <constraint firstItem="sFb-WF-0mS" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="g6y-Ga-vAJ"/>
+                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="sFb-WF-0mS" secondAttribute="trailing" constant="30" id="j4c-XX-LOP"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="h3A-ej-P6A" secondAttribute="trailing" constant="30" id="jIH-RP-EfO"/>
-                            <constraint firstItem="aRk-SF-hqV" firstAttribute="top" secondItem="KQ4-sD-3wt" secondAttribute="bottom" constant="8" id="pTi-qy-tup"/>
+                            <constraint firstItem="6TF-0M-q2P" firstAttribute="top" secondItem="sFb-WF-0mS" secondAttribute="bottom" constant="10" id="ocs-6X-Z3J"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="6TF-0M-q2P" secondAttribute="trailing" constant="30" id="uL1-Df-uVK"/>
                         </constraints>
                     </view>
@@ -184,6 +201,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
