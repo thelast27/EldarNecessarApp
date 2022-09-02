@@ -15,6 +15,7 @@ class Trips: Object {
     @Persisted var items = List<ItemsForTrip>()
     @Persisted var long: Double = 0.0
     @Persisted var lat: Double = 0.0
+    @Persisted var coordinatesAvailable: Bool = false
     
 }
 
