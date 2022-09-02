@@ -24,21 +24,30 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.title = ""
-
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
-                                              UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))]
-        
-        itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
-        
         trips = realmManager.realm.object(ofType: Trips.self, forPrimaryKey: id)
         sendTripsIdClosure?(trips)
         resultsRealmDataWithItem = trips.items
+        itemListTableView.reloadData()
+        
+        navigationController?.title = ""
+        
+        itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
         
         itemListTableView.reloadData()
+    
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        if trips.coordinatesAvailable == true {
+            navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
+                                                  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction)),
+                                                  UIBarButtonItem(image: UIImage(systemName: "cloud.sun.rain.fill"), style: .done, target: self, action: #selector(showMap))]
+        } else {
+            navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
+                                                  UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))]
+        }
         itemListTableView.reloadData()
     }
     
@@ -54,10 +63,13 @@ class ItemsViewController: UIViewController {
     }
     
     @objc func showMap(_ sender: Any) {
+        
         guard let vc = UIStoryboard(name: "MapStoryboard", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
-        let navigationVC = UINavigationController(rootViewController: vc)
+        vc.geoClosure = { [weak self] geoData in
+            self?.view.layoutIfNeeded()
+        }
         vc.id = id
-        present(navigationVC, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
