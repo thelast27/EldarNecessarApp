@@ -59,21 +59,22 @@
                                     <action selector="addPhoto:" destination="D30-0n-d1I" eventType="touchUpInside" id="GQ7-qY-WTn"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h3A-ej-P6A">
-                                <rect key="frame" x="30" y="74" width="354" height="83"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-0M-q2P">
+                                <rect key="frame" x="30" y="304" width="354" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-aR-NEQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-HC-4hR">
-                                        <rect key="frame" x="0.0" y="49" width="354" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-hG-xQM">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-8t-hHK">
+                                        <rect key="frame" x="117" y="0.0" width="237" height="50"/>
+                                        <locale key="locale" localeIdentifier="en_UA"/>
+                                        <connections>
+                                            <action selector="getDateFromPicker:" destination="D30-0n-d1I" eventType="valueChanged" id="OaU-9r-eja"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-sD-3wt">
@@ -130,48 +131,33 @@
                                 <rect key="frame" x="252" y="490.5" width="64" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sFb-WF-0mS">
-                                <rect key="frame" x="30" y="202" width="354" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h3A-ej-P6A">
+                                <rect key="frame" x="30" y="213" width="354" height="83"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" placeholder="Search trip location" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Re-bdn">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="51"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOT-3i-HEw">
-                                        <rect key="frame" x="0.0" y="61" width="354" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system" title="Find on the map"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-0M-q2P">
-                                <rect key="frame" x="30" y="304" width="354" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-hG-xQM">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-8t-hHK">
-                                        <rect key="frame" x="117" y="0.0" width="237" height="50"/>
-                                        <locale key="locale" localeIdentifier="en_UA"/>
-                                        <connections>
-                                            <action selector="getDateFromPicker:" destination="D30-0n-d1I" eventType="valueChanged" id="OaU-9r-eja"/>
-                                        </connections>
-                                    </datePicker>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-aR-NEQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-HC-4hR">
+                                        <rect key="frame" x="0.0" y="49" width="354" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acd-mE-M2N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="h3A-ej-P6A" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="topMargin" constant="30" id="3at-w9-cAo"/>
+                            <constraint firstItem="h3A-ej-P6A" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="topMargin" constant="169" id="3at-w9-cAo"/>
                             <constraint firstItem="Swd-2f-EX0" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="41W-k9-0MU"/>
                             <constraint firstItem="Swd-2f-EX0" firstAttribute="top" secondItem="aRk-SF-hqV" secondAttribute="bottom" constant="307" id="5Qw-OT-Xqe"/>
+                            <constraint firstItem="6TF-0M-q2P" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="8" id="68s-fA-UBV"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="aRk-SF-hqV" secondAttribute="trailing" constant="30" id="8cm-cl-omW"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="Swd-2f-EX0" secondAttribute="trailing" constant="30" id="8jw-OI-xfr"/>
-                            <constraint firstItem="sFb-WF-0mS" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="45" id="9LU-io-m5E"/>
                             <constraint firstItem="h3A-ej-P6A" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="B5g-DB-h2r"/>
                             <constraint firstItem="aRk-SF-hqV" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="GCa-M4-5P6"/>
                             <constraint firstItem="KQ4-sD-3wt" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="H0c-qX-bV0"/>
@@ -179,10 +165,7 @@
                             <constraint firstItem="KQ4-sD-3wt" firstAttribute="top" secondItem="6TF-0M-q2P" secondAttribute="bottom" constant="5" id="NYT-e6-6n7"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Swd-2f-EX0" secondAttribute="bottom" constant="110" id="UwL-kn-7lK"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="KQ4-sD-3wt" secondAttribute="trailing" constant="30" id="d11-BY-MrT"/>
-                            <constraint firstItem="sFb-WF-0mS" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="g6y-Ga-vAJ"/>
-                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="sFb-WF-0mS" secondAttribute="trailing" constant="30" id="j4c-XX-LOP"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="h3A-ej-P6A" secondAttribute="trailing" constant="30" id="jIH-RP-EfO"/>
-                            <constraint firstItem="6TF-0M-q2P" firstAttribute="top" secondItem="sFb-WF-0mS" secondAttribute="bottom" constant="10" id="ocs-6X-Z3J"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="6TF-0M-q2P" secondAttribute="trailing" constant="30" id="uL1-Df-uVK"/>
                         </constraints>
                     </view>
@@ -201,7 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
