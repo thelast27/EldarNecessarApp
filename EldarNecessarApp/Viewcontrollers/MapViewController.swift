@@ -14,11 +14,13 @@ class MapViewController: UIViewController {
     @IBOutlet weak var viewForMap: UIView!
     @IBOutlet weak var tripPlaceSelected: UIButton!
     
+    typealias SetGeoIngo = ([Double]) -> Void
     private var realmManager = RealmManager()
     var trips: Trips!
     var long: Double = 0.0
     var lat: Double = 0.0
     var id: ObjectId!
+    var geoClosure: SetGeoIngo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,8 @@ class MapViewController: UIViewController {
     }
     @IBAction func savePlaceForTRip(_ sender: Any) {
         realmManager.addMarkerToRealm(lat: lat, long: long, in: trips) {
-            dismiss(animated: true)
+            geoClosure?([lat, long])
+            navigationController?.popViewController(animated: true)
         }
     }
 }
