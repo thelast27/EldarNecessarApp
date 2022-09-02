@@ -13,6 +13,8 @@ class Trips: Object {
     @Persisted var tripName: String = ""
     @Persisted var tripNotes: String = ""
     @Persisted var items = List<ItemsForTrip>()
+    @Persisted var long: Double = 0.0
+    @Persisted var lat: Double = 0.0
     
 }
 
