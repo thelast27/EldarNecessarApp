@@ -73,4 +73,12 @@ lazy var realm: Realm = {
         completion()
     }
     
+    func addMarkerToRealm(lat: Double, long: Double, in trip: Trips, completion: completionHandler) {
+        try! realm.write({
+            trip.long = long
+            trip.lat = lat
+        })
+        completion()
+    }
+    
 }
