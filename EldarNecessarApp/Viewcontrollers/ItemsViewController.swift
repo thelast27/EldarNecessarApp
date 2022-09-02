@@ -56,6 +56,7 @@ class ItemsViewController: UIViewController {
     @objc func showMap(_ sender: Any) {
         guard let vc = UIStoryboard(name: "MapStoryboard", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
         let navigationVC = UINavigationController(rootViewController: vc)
+        vc.id = id
         present(navigationVC, animated: true)
     }
     
