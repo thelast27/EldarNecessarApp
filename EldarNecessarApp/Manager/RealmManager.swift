@@ -77,6 +77,7 @@ lazy var realm: Realm = {
         try! realm.write({
             trip.long = long
             trip.lat = lat
+            trip.coordinatesAvailable = true
         })
         completion()
     }
