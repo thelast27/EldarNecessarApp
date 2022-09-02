@@ -199,7 +199,6 @@
 				F6E3E56984FE8580B8CA933B /* Pods-EldarNecessarApp.debug.xcconfig */,
 				724A6E6BD32DB495900CEF5D /* Pods-EldarNecessarApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -262,7 +261,7 @@
 			);
 			mainGroup = 4D3AA27328A282A400E829B3;
 			packageReferences = (
-				4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+				4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 4D3AA27D28A282A500E829B3 /* Products */;
 			projectDirPath = "";
@@ -574,7 +573,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -587,12 +586,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4D08D3B028B77F3100B2A359 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		4D08D3B228B77F3100B2A359 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 4D08D3AF28B77F3100B2A359 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
