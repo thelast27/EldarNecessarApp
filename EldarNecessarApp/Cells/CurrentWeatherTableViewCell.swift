@@ -9,6 +9,10 @@ import UIKit
 
 class CurrentWeatherTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var currentWeather: UILabel!
+    @IBOutlet weak var weatherDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +24,19 @@ class CurrentWeatherTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    func update(date: CurrentAndForecastWeather) {
+        DispatchQueue.main.async {
+            guard let temp = date.current?.temp,
+                  let cityName = date.timeZone,
+                  let description = date.current?.weather?.first?.description
+            else { return }
+            self.locationName.text = cityName
+            self.currentWeather.text = "\(Int(temp)) °"
+            self.weatherDescription.text = "Now \(description)"
+        }
+        
+        
+        
+    }
 }
