@@ -20,6 +20,8 @@ class ItemsViewController: UIViewController {
     var id: ObjectId!
     var sendTripsIdClosure: SendTripsID?
     var items: ItemsForTrip!
+    var lat: Double = 0.0
+    var long: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +68,8 @@ class ItemsViewController: UIViewController {
         
         guard let vc = UIStoryboard(name: "MapStoryboard", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
         vc.geoClosure = { [weak self] geoData in
-            self?.view.layoutIfNeeded()
+            self?.lat = vc.lat
+            self?.long = vc.long
         }
         vc.id = id
         navigationController?.pushViewController(vc, animated: true)
@@ -74,7 +77,8 @@ class ItemsViewController: UIViewController {
     
     @objc func showWeather (_ sender: Any) {
         guard let vc = UIStoryboard(name: "WeatherStoryboard", bundle: nil).instantiateViewController(withIdentifier: "WeatherVC") as? WeatherViewController else { return }
-      
+        vc.lat = lat
+        vc.long = long
         navigationController?.pushViewController(vc, animated: true)
     }
     
