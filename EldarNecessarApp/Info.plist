@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>weatherApiKey</key>
+	<string>48d181f9d784cbd7bb7cae6874e3519b</string>
+	<key>googleMapsAPI</key>
+	<string>AIzaSyDd9j0Gq-JAjcf_Hd1PFMmq6zmygrnUUe0</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,7 +25,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>googleMapsAPI</key>
-	<string>AIzaSyDd9j0Gq-JAjcf_Hd1PFMmq6zmygrnUUe0</string>
 </dict>
 </plist>

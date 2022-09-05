@@ -32,6 +32,9 @@
 		4D9FF9A928C5EC25009F7EF5 /* WeatherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9FF9A828C5EC25009F7EF5 /* WeatherStoryboard.storyboard */; };
 		4D9FF9B028C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FF9AE28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift */; };
 		4D9FF9B128C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9FF9AF28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.xib */; };
+		4D9FF9B328C5F833009F7EF5 /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FF9B228C5F833009F7EF5 /* CurrentWeatherModel.swift */; };
+		4D9FF9B528C5F89D009F7EF5 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FF9B428C5F89D009F7EF5 /* WeatherManager.swift */; };
+		4D9FF9B728C5F915009F7EF5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FF9B628C5F915009F7EF5 /* APIManager.swift */; };
 		4DA04AFA28BE5825001CCF25 /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */; };
 		4DA04AFC28BE5866001CCF25 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA04AFB28BE5866001CCF25 /* MapViewController.swift */; };
 		4DA8BE6728BE52DE0007E64D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8BE6628BE52DE0007E64D /* TabBarViewController.swift */; };
@@ -65,6 +68,9 @@
 		4D9FF9A828C5EC25009F7EF5 /* WeatherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherStoryboard.storyboard; sourceTree = "<group>"; };
 		4D9FF9AE28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		4D9FF9AF28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherTableViewCell.xib; sourceTree = "<group>"; };
+		4D9FF9B228C5F833009F7EF5 /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
+		4D9FF9B428C5F89D009F7EF5 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		4D9FF9B628C5F915009F7EF5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
 		4DA04AFB28BE5866001CCF25 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4DA8BE6628BE52DE0007E64D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				4D08D3B428B7818E00B2A359 /* RealmManager.swift */,
+				4D9FF9B428C5F89D009F7EF5 /* WeatherManager.swift */,
+				4D9FF9B628C5F915009F7EF5 /* APIManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4D08D3B628B7840700B2A359 /* RealmModel.swift */,
+				4D9FF9B228C5F833009F7EF5 /* CurrentWeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,9 +361,11 @@
 			files = (
 				4D9FF9B028C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift in Sources */,
 				4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */,
+				4D9FF9B528C5F89D009F7EF5 /* WeatherManager.swift in Sources */,
 				4D9FF9A728C5EC0A009F7EF5 /* WeatherViewController.swift in Sources */,
 				4D11C85428BA4134008569F7 /* EditItemViewController.swift in Sources */,
 				4D08D3B728B7840700B2A359 /* RealmModel.swift in Sources */,
+				4D9FF9B728C5F915009F7EF5 /* APIManager.swift in Sources */,
 				4D44E39B28A38CC8004D936E /* SetTripViewController.swift in Sources */,
 				4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */,
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
@@ -363,6 +374,7 @@
 				4D11C85228BA167D008569F7 /* ItemsListVC+Extension.swift in Sources */,
 				4D3AA28028A282A500E829B3 /* AppDelegate.swift in Sources */,
 				4D1EE88728AB8D0D003F6EA9 /* ItemsViewController.swift in Sources */,
+				4D9FF9B328C5F833009F7EF5 /* CurrentWeatherModel.swift in Sources */,
 				4D070ADB28A28AC500FA7102 /* TripListVC+Extension.swift in Sources */,
 				4D1EE88E28ABC62A003F6EA9 /* ItemTableViewCell.swift in Sources */,
 				4DA8BE6728BE52DE0007E64D /* TabBarViewController.swift in Sources */,
