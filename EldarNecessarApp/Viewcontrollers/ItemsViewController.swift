@@ -43,7 +43,7 @@ class ItemsViewController: UIViewController {
         if trips.coordinatesAvailable == true {
             navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
                                                   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction)),
-                                                  UIBarButtonItem(image: UIImage(systemName: "cloud.sun.rain.fill"), style: .done, target: self, action: #selector(showMap))]
+                                                  UIBarButtonItem(image: UIImage(systemName: "cloud.sun.rain.fill"), style: .done, target: self, action: #selector(showWeather))]
         } else {
             navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
                                                   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction))]
@@ -69,6 +69,12 @@ class ItemsViewController: UIViewController {
             self?.view.layoutIfNeeded()
         }
         vc.id = id
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func showWeather (_ sender: Any) {
+        guard let vc = UIStoryboard(name: "WeatherStoryboard", bundle: nil).instantiateViewController(withIdentifier: "WeatherVC") as? WeatherViewController else { return }
+      
         navigationController?.pushViewController(vc, animated: true)
     }
     
