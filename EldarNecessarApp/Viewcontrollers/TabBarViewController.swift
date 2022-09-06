@@ -11,12 +11,10 @@ import UIKit
 class TabBarViewControoller: UITabBarController {
     
     override func viewDidLoad() {
-        guard let weatherViewContoller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TripListViewController") as? StartTripListViewController,
-        let mapVC = UIStoryboard(name: "MapStoryboard", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController
+        guard let weatherViewContoller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TripListViewController") as? StartTripListViewController
         else { return }
         
-        viewControllers = [addViewController(viewController: UINavigationController(rootViewController: weatherViewContoller), title: "Trips", image: UIImage(systemName: "airplane.departure")),
-                           addViewController(viewController: UINavigationController(rootViewController: mapVC), title: "Map", image: UIImage(systemName: "map"))]
+        viewControllers = [addViewController(viewController: UINavigationController(rootViewController: weatherViewContoller), title: "Trips", image: UIImage(systemName: "airplane.departure"))]
     }
     
     
