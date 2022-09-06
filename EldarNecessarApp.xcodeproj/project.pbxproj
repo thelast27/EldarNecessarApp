@@ -185,10 +185,7 @@
 			children = (
 				4D6682BD28AFD3A800BB20C3 /* TripListTableView */,
 				4D6682BC28AFD39400BB20C3 /* ItemListTableView */,
-				4D9FF9AE28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift */,
-				4D9FF9AF28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.xib */,
-				4D77091F28C64882006720A7 /* DailyTableViewCell.swift */,
-				4D77092028C64882006720A7 /* DailyTableViewCell.xib */,
+				4DB4B48F28C7757E00B6889D /* WeatherCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -211,6 +208,33 @@
 				4D77091D28C647C4006720A7 /* DailyWeatherModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4DB4B48F28C7757E00B6889D /* WeatherCells */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4B49028C7759900B6889D /* CurrentWeatherCells */,
+				4DB4B49128C775AD00B6889D /* DailyWeatherCells */,
+			);
+			path = WeatherCells;
+			sourceTree = "<group>";
+		};
+		4DB4B49028C7759900B6889D /* CurrentWeatherCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D9FF9AE28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift */,
+				4D9FF9AF28C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.xib */,
+			);
+			path = CurrentWeatherCells;
+			sourceTree = "<group>";
+		};
+		4DB4B49128C775AD00B6889D /* DailyWeatherCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D77091F28C64882006720A7 /* DailyTableViewCell.swift */,
+				4D77092028C64882006720A7 /* DailyTableViewCell.xib */,
+			);
+			path = DailyWeatherCells;
 			sourceTree = "<group>";
 		};
 		4DD40BE028A518FC001A0F4F /* Extensions */ = {
