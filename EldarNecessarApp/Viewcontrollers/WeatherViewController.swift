@@ -26,14 +26,22 @@ class WeatherViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        weatherManagerDelegte.getCoordinatesByName(forCity: "Dublin") { [weak self] weatherData in
+        weatherManagerDelegte.getWeatherForCityCoordinates(long: long, lat: lat, withLang: .english, withUnitsOfmeasurement: .celsius) { [weak self] weatherData in
             guard let self = self else { return }
-            self.currentAndForecustedWeather = weatherData
-            self.dailyWeather = weatherData.daily
-            DispatchQueue.main.async {
-                self.weatherTableView.reloadData()
-            }
+                     self.currentAndForecustedWeather = weatherData
+                     self.dailyWeather = weatherData.daily
+                     DispatchQueue.main.async {
+                         self.weatherTableView.reloadData()
+                     }
         }
+//        weatherManagerDelegte.getCoordinatesByName(forCity: "Dublin") { [weak self] weatherData in
+//            guard let self = self else { return }
+//            self.currentAndForecustedWeather = weatherData
+//            self.dailyWeather = weatherData.daily
+//            DispatchQueue.main.async {
+//                self.weatherTableView.reloadData()
+//            }
+//        }
     }
     
 }
