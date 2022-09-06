@@ -31,8 +31,6 @@ class ItemsViewController: UIViewController {
         resultsRealmDataWithItem = trips.items
         itemListTableView.reloadData()
         
-        navigationController?.title = ""
-        
         itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
         
         itemListTableView.reloadData()
