@@ -125,15 +125,11 @@
 		4D3AA27E28A282A500E829B3 /* EldarNecessarApp */ = {
 			isa = PBXGroup;
 			children = (
-				4D3AA27F28A282A500E829B3 /* AppDelegate.swift */,
-				4D3AA28128A282A500E829B3 /* SceneDelegate.swift */,
+				4D6C5AE428C77BB40019C082 /* Helpers */,
 				4D6682BE28AFD3B600BB20C3 /* Cells */,
 				4D44E39F28A38E58004D936E /* Viewcontrollers */,
 				4D44E39E28A38E4A004D936E /* Storyboards */,
-				4D3AA28828A282AA00E829B3 /* Assets.xcassets */,
 				4DD40BE028A518FC001A0F4F /* Extensions */,
-				4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */,
-				4D3AA28D28A282AA00E829B3 /* Info.plist */,
 				4DA8BE6428BE529F0007E64D /* Manager */,
 				4DA8BE6528BE52A90007E64D /* Model */,
 			);
@@ -147,6 +143,7 @@
 				4D1EE88428AB8CE4003F6EA9 /* ItemsList.storyboard */,
 				4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */,
 				4D9FF9A828C5EC25009F7EF5 /* WeatherStoryboard.storyboard */,
+				4D3AA28A28A282AA00E829B3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -192,6 +189,17 @@
 				4DB4B48F28C7757E00B6889D /* WeatherCells */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D6C5AE428C77BB40019C082 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D3AA27F28A282A500E829B3 /* AppDelegate.swift */,
+				4D3AA28128A282A500E829B3 /* SceneDelegate.swift */,
+				4D3AA28828A282AA00E829B3 /* Assets.xcassets */,
+				4D3AA28D28A282AA00E829B3 /* Info.plist */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4DA8BE6428BE529F0007E64D /* Manager */ = {
