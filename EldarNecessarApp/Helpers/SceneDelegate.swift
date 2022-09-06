@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = TabBarViewControoller()
+        guard   let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TripListViewController") as? StartTripListViewController else { return }
+        let navVC = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navVC
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
