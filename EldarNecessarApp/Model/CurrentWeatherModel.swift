@@ -1,8 +1,8 @@
 //
-//  CurrentWeatherModel.swift
-//  EldarNecessarApp
+//  GeneralWeatherModel.swift
+//  EldarWeatherApp
 //
-//  Created by Eldar Garbuzov on 5.09.22.
+//  Created by Eldar Garbuzov on 22.07.22.
 //
 
 import Foundation
@@ -13,10 +13,10 @@ struct CurrentAndForecastWeather: Codable {
     var timeZone: String?
     var timeZoneOffset: Int?
     var current: CurrentWeatherData?
-//    var daily: [DailyWeatherData]?
+    var daily: [DailyWeatherData]?
 
     enum CodingKeys: String, CodingKey {
-        case lat, lon, current
+        case lat, lon, current, daily
         case timeZone = "timezone"
         case timeZoneOffset = "timezone_offset"
     }
