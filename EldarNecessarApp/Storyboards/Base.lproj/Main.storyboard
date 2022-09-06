@@ -16,9 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bkf-Hn-Lm0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1H-jI-n3b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bcc-bh-q5f">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DwE-kt-H9c">
                                 <rect key="frame" x="10" y="54" width="394" height="700"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="VtK-Zc-30s"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="iCi-h3-Koi"/>
@@ -26,15 +40,24 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.3236905336" green="0.66599529980000005" blue="0.51427048440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Bkf-Hn-Lm0" firstAttribute="top" secondItem="l1H-jI-n3b" secondAttribute="top" id="6zS-dG-nDe"/>
+                            <constraint firstItem="l1H-jI-n3b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Sk-br-8Pi"/>
+                            <constraint firstItem="l1H-jI-n3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Da8-DG-eDH"/>
+                            <constraint firstItem="Bkf-Hn-Lm0" firstAttribute="width" secondItem="l1H-jI-n3b" secondAttribute="height" multiplier="207:448" id="Jjk-9s-Gud"/>
+                            <constraint firstItem="l1H-jI-n3b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SEW-7n-7ed"/>
+                            <constraint firstAttribute="bottom" secondItem="l1H-jI-n3b" secondAttribute="bottom" id="TLT-F3-QWz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DwE-kt-H9c" secondAttribute="bottom" constant="108" id="ahg-F5-4Xb"/>
+                            <constraint firstItem="Bkf-Hn-Lm0" firstAttribute="bottom" secondItem="l1H-jI-n3b" secondAttribute="bottom" id="dLC-qC-Nzn"/>
                             <constraint firstItem="DwE-kt-H9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dUV-xP-72U"/>
                             <constraint firstItem="DwE-kt-H9c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="iNv-Xd-418"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DwE-kt-H9c" secondAttribute="trailing" constant="10" id="lH8-NX-1hp"/>
+                            <constraint firstItem="Bkf-Hn-Lm0" firstAttribute="leading" secondItem="l1H-jI-n3b" secondAttribute="leading" id="nbf-a8-yQa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundPic" destination="Bkf-Hn-Lm0" id="k0X-ln-eEM"/>
                         <outlet property="tripListTableView" destination="DwE-kt-H9c" id="lca-oR-4PT"/>
                     </connections>
                 </viewController>
