@@ -9,9 +9,6 @@ import UIKit
 
 class DailyTableViewCell: UITableViewCell {
     
-    var dailyWeather: [DailyWeatherData]?
-    
-
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
