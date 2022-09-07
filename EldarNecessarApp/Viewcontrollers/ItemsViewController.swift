@@ -11,6 +11,7 @@ import RealmSwift
 class ItemsViewController: UIViewController {
     
     @IBOutlet weak var itemListTableView: UITableView!
+    @IBOutlet weak var viewForBackground: UIImageView!
     
     typealias SendTripsID = (Trips) -> Void
     
@@ -25,7 +26,7 @@ class ItemsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewForBackground.image = UIImage(named: "backgroundPic")
         trips = realmManager.realm.object(ofType: Trips.self, forPrimaryKey: id)
         guard let trip = trips else { return }
         sendTripsIdClosure?(trip)
@@ -41,7 +42,8 @@ class ItemsViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        if trips?.coordinatesAvailable == true {
+        guard let trip = trips else { return }
+        if trip.coordinatesAvailable {
             navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
                                                   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction)),
                                                   UIBarButtonItem(image: UIImage(systemName: "cloud.sun.rain.fill"), style: .done, target: self, action: #selector(showWeather))]
