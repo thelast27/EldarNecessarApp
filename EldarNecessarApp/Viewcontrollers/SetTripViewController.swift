@@ -18,6 +18,7 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var departureDate: UIDatePicker!
     @IBOutlet weak var returnDate: UIDatePicker!
     @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var viewForBackground: UIImageView!
     
     var documentsURL: URL!
     typealias SendTripsDataClosure = (Trips) -> Void
@@ -30,6 +31,7 @@ class SetTripViewController: UIViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        viewForBackground.image = UIImage(named: "backgroundPic")
     }
     
     

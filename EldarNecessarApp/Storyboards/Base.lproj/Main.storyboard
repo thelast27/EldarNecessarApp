@@ -73,6 +73,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bla-Xj-gaO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-8J-QEB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9mt-Jb-hq2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ael-u7-TFN">
                                 <rect key="frame" x="324" y="490" width="80" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -177,6 +188,7 @@
                         <constraints>
                             <constraint firstItem="h3A-ej-P6A" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="topMargin" constant="169" id="3at-w9-cAo"/>
                             <constraint firstItem="Swd-2f-EX0" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="41W-k9-0MU"/>
+                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="width" secondItem="1W5-8J-QEB" secondAttribute="height" multiplier="207:448" id="4ei-yL-0gf"/>
                             <constraint firstItem="Swd-2f-EX0" firstAttribute="top" secondItem="aRk-SF-hqV" secondAttribute="bottom" constant="307" id="5Qw-OT-Xqe"/>
                             <constraint firstItem="6TF-0M-q2P" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="8" id="68s-fA-UBV"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="aRk-SF-hqV" secondAttribute="trailing" constant="30" id="8cm-cl-omW"/>
@@ -186,10 +198,17 @@
                             <constraint firstItem="KQ4-sD-3wt" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="H0c-qX-bV0"/>
                             <constraint firstItem="6TF-0M-q2P" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="JMa-P8-I0x"/>
                             <constraint firstItem="KQ4-sD-3wt" firstAttribute="top" secondItem="6TF-0M-q2P" secondAttribute="bottom" constant="5" id="NYT-e6-6n7"/>
+                            <constraint firstItem="1W5-8J-QEB" firstAttribute="trailing" secondItem="acd-mE-M2N" secondAttribute="trailing" id="Umf-uK-RUE"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Swd-2f-EX0" secondAttribute="bottom" constant="110" id="UwL-kn-7lK"/>
+                            <constraint firstItem="1W5-8J-QEB" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="top" id="ZP2-Ia-PD7"/>
+                            <constraint firstItem="1W5-8J-QEB" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" id="atO-mK-nvc"/>
+                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="top" secondItem="1W5-8J-QEB" secondAttribute="top" id="bXW-lC-CI6"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="KQ4-sD-3wt" secondAttribute="trailing" constant="30" id="d11-BY-MrT"/>
+                            <constraint firstAttribute="bottom" secondItem="1W5-8J-QEB" secondAttribute="bottom" id="i75-aQ-E5x"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="h3A-ej-P6A" secondAttribute="trailing" constant="30" id="jIH-RP-EfO"/>
+                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="leading" secondItem="1W5-8J-QEB" secondAttribute="leading" id="kHh-fO-wbU"/>
                             <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="6TF-0M-q2P" secondAttribute="trailing" constant="30" id="uL1-Df-uVK"/>
+                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="bottom" secondItem="1W5-8J-QEB" secondAttribute="bottom" id="xBr-i3-JZc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -199,6 +218,7 @@
                         <outlet property="returnDate" destination="5kL-xg-5UF" id="mek-05-Cbr"/>
                         <outlet property="tripName" destination="ZbQ-aR-NEQ" id="kYr-in-Gv4"/>
                         <outlet property="tripNotes" destination="sgX-HC-4hR" id="VA9-oC-CYI"/>
+                        <outlet property="viewForBackground" destination="Bla-Xj-gaO" id="CAc-sg-oqT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBO-d5-dyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

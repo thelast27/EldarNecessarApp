@@ -21,7 +21,7 @@ class StartTripListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundPic.image = UIImage(named: "tripsListVC")
+        backgroundPic.image = UIImage(named: "backgroundPic")
 
         self.navigationItem.title = "Trips list"
 
