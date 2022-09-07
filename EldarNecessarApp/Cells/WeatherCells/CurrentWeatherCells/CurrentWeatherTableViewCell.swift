@@ -44,13 +44,8 @@ class CurrentWeatherTableViewCell: UITableViewCell {
                   let sunIndex = date.current?.uvi,
                   let visibility = date.current?.visibility
             else { return }
-            let endpoint = Endpoint.getIcon(icon: "\(icon)")
-            DispatchQueue.global(qos: .utility).async {
-                guard let iconData = try? Data(contentsOf: endpoint.url) else { return }
-                DispatchQueue.main.async {
-                    self.viewForImage.image = UIImage(data: iconData)
-                }
-            }
+            
+            self.viewForImage.getImageFromTheInternet(icon)
             self.currentWeather.text = "\(Int(temp)) °C"
             self.weatherDescription.text = "Now \(description)"
             self.feelsLike.text = "Feels like \(Int(feelsLike))°C"
