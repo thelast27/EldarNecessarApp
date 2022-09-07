@@ -47,6 +47,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="tripName" destination="KNM-c5-jQU" id="Hgd-vZ-TJY"/>
                 <outlet property="tripNotes" destination="aDc-qi-2Ol" id="9d6-hc-8PQ"/>

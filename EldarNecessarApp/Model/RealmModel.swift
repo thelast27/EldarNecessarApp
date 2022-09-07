@@ -13,6 +13,9 @@ class Trips: Object {
     @Persisted var tripName: String = ""
     @Persisted var tripNotes: String = ""
     @Persisted var items = List<ItemsForTrip>()
+    @Persisted var long: Double = 0.0
+    @Persisted var lat: Double = 0.0
+    @Persisted var coordinatesAvailable: Bool = false
     
 }
 
@@ -22,4 +25,5 @@ class ItemsForTrip: Object {
     @Persisted var itemName: String = ""
     @Persisted var itemDescription: String = ""
     @Persisted var itemQty: Int = 0
+    @Persisted var isPacked: Bool = false
 }

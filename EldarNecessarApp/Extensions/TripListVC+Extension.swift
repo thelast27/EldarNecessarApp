@@ -16,12 +16,6 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell {
-//            cell.tripName.text = arrayWithTrips[indexPath.row]
-//            cell.tripPhoto.image = UIImage(contentsOfFile: (contentOfDirectory[indexPath.row].path)) // если пытаюсь загрузить просто текст, без фото - ошибка Thread 1: Fatal error: Index out of range
-//            return cell
-//        }
-//        return UITableViewCell()
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TripTableViewCell.key, for: indexPath) as? TripTableViewCell else { return UITableViewCell() }
         let trip = resultsRealmData[indexPath.row]
         cell.tripName.text = trip.tripName
@@ -30,11 +24,11 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tripListTableView.deselectRow(at: indexPath, animated: true)
         guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "ItemsVC") as? ItemsViewController else { return }
         vc.id = resultsRealmData[indexPath.row]._id
         vc.title = resultsRealmData[indexPath.row].tripName
         navigationController?.pushViewController(vc, animated: true)
-        
     }
 
     
@@ -46,5 +40,4 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
             }
         }
     }
-
 }

@@ -14,6 +14,8 @@ class RealmManager {
     
     private let realmSchemaVersion: UInt64 = 2
     
+    typealias completionHandler = () -> Void
+    
     
 lazy var realm: Realm = {
         let config = Realm.Configuration(schemaVersion: realmSchemaVersion)
@@ -34,6 +36,14 @@ lazy var realm: Realm = {
         }
     }
     
+    func writeItemIsPackedDataToRealm(item: ItemsForTrip, in trip: Trips) {
+        try! realm.write({
+            item.isPacked.toggle()
+        })
+    }
+    
+    
+    
     func getTripDataFromRealm() -> Results<Trips> {
         return realm.objects(Trips.self)
     }
@@ -46,6 +56,30 @@ lazy var realm: Realm = {
         try! realm.write {
             realm.delete(data)
         }
+    }
+    
+    func deleteITemFromTrip(item: ItemsForTrip, from trip: Trips, completion: completionHandler) {
+        try! realm.write {
+            trip.items.realm?.delete(item)
+        }
+        completion()
+    }
+    
+    func editItem(item: ItemsForTrip, in trip: Trips, updatedItems: ItemsForTrip, completion: completionHandler) {
+        try! realm.write {
+            trip.items.realm?.delete(item)
+            trip.items.append(updatedItems)
+        }
+        completion()
+    }
+    
+    func addMarkerToRealm(lat: Double, long: Double, in trip: Trips, completion: completionHandler) {
+        try! realm.write({
+            trip.long = long
+            trip.lat = lat
+            trip.coordinatesAvailable = true
+        })
+        completion()
     }
     
 }

@@ -21,11 +21,41 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.itemName.text = items.itemName
         cell.itemDescription.text = items.itemDescription
         cell.itemQty.text = "\(items.itemQty)"
+        cell.checkMark.isHidden = items.isPacked == true ? false : true
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController, let trip = trips else { return }
+        vc.titleForTop = resultsRealmDataWithItem[indexPath.row].itemName
+        vc.items = resultsRealmDataWithItem[indexPath.row]
+        vc.trips = trip
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let items = resultsRealmDataWithItem[indexPath.row]
+        let doCheckMark = UIContextualAction(style: .normal, title: "\(items.isPacked == false ? "Check" : "Uncheck")") { [weak self] (action, view, completionHandler) in
+            
+            guard let items = self?.resultsRealmDataWithItem[indexPath.row], let trip = self?.trips else { return }
+            self?.realmManager.writeItemIsPackedDataToRealm(item: items, in: trip)
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        
+        doCheckMark.backgroundColor = items.isPacked == false ? .systemGreen : .systemBlue
+        
+        return UISwipeActionsConfiguration(actions: [doCheckMark])
     }
 }
+
+
+
+
+
+
+
