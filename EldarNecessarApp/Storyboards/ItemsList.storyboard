@@ -70,16 +70,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-Dd-Beb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-Sr-j6z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JMr-Az-efK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FMT-le-U4e">
                                 <rect key="frame" x="20" y="44" width="374" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVe-fU-UDj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-Em-Dtk">
                                         <rect key="frame" x="0.0" y="59" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -127,6 +140,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNH-Mv-RTK">
                                         <rect key="frame" x="0.0" y="84.5" width="374" height="31"/>
+                                        <color key="tintColor" red="0.191679606" green="0.40085482360000002" blue="0.3429064027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                         <connections>
@@ -135,8 +149,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1C-tL-dIb">
                                         <rect key="frame" x="0.0" y="130.5" width="374" height="31"/>
+                                        <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                                        <color key="tintColor" systemColor="separatorColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
                                         <connections>
                                             <action selector="cancelSetItem:" destination="lE2-JX-jPG" eventType="touchUpInside" id="W4m-By-R6Q"/>
                                         </connections>
@@ -149,16 +165,26 @@
                         <constraints>
                             <constraint firstItem="FMT-le-U4e" firstAttribute="leading" secondItem="V08-Ds-xBx" secondAttribute="leading" constant="20" id="2pB-xj-PPO"/>
                             <constraint firstItem="3Xp-T8-DUn" firstAttribute="top" secondItem="QMS-ui-0J7" secondAttribute="bottom" constant="10" id="C3e-w3-nT7"/>
+                            <constraint firstItem="eKh-Sr-j6z" firstAttribute="leading" secondItem="V08-Ds-xBx" secondAttribute="leading" id="DSg-go-zQK"/>
                             <constraint firstItem="FMT-le-U4e" firstAttribute="top" secondItem="V08-Ds-xBx" secondAttribute="top" id="Dfr-MY-r7S"/>
                             <constraint firstItem="QMS-ui-0J7" firstAttribute="top" secondItem="FMT-le-U4e" secondAttribute="bottom" constant="10" id="H1b-ba-2ya"/>
                             <constraint firstItem="V08-Ds-xBx" firstAttribute="trailing" secondItem="FMT-le-U4e" secondAttribute="trailing" constant="20" id="Isk-mn-bLe"/>
+                            <constraint firstItem="O4f-Dd-Beb" firstAttribute="top" secondItem="ppI-nA-9Ub" secondAttribute="top" id="J6F-21-SFF"/>
+                            <constraint firstItem="O4f-Dd-Beb" firstAttribute="trailing" secondItem="V08-Ds-xBx" secondAttribute="trailing" id="K7H-N9-FqC"/>
                             <constraint firstItem="3Xp-T8-DUn" firstAttribute="leading" secondItem="V08-Ds-xBx" secondAttribute="leading" constant="20" id="Not-Bj-sBV"/>
+                            <constraint firstItem="eKh-Sr-j6z" firstAttribute="trailing" secondItem="V08-Ds-xBx" secondAttribute="trailing" id="QBl-Ps-qZV"/>
+                            <constraint firstAttribute="bottom" secondItem="O4f-Dd-Beb" secondAttribute="bottom" id="Rvo-vu-gSK"/>
                             <constraint firstItem="V08-Ds-xBx" firstAttribute="trailing" secondItem="3Xp-T8-DUn" secondAttribute="trailing" constant="20" id="Tue-0Z-aGU"/>
                             <constraint firstItem="QMS-ui-0J7" firstAttribute="leading" secondItem="V08-Ds-xBx" secondAttribute="leading" constant="20" id="UPV-GI-pDw"/>
+                            <constraint firstItem="eKh-Sr-j6z" firstAttribute="top" secondItem="ppI-nA-9Ub" secondAttribute="top" id="V3G-g3-mlA"/>
+                            <constraint firstAttribute="bottom" secondItem="eKh-Sr-j6z" secondAttribute="bottom" id="ecs-28-HYa"/>
+                            <constraint firstItem="O4f-Dd-Beb" firstAttribute="leading" secondItem="V08-Ds-xBx" secondAttribute="leading" id="jxj-kT-KU9"/>
+                            <constraint firstItem="O4f-Dd-Beb" firstAttribute="width" secondItem="eKh-Sr-j6z" secondAttribute="height" multiplier="207:448" id="oWC-fg-y0S"/>
                             <constraint firstItem="V08-Ds-xBx" firstAttribute="trailing" secondItem="QMS-ui-0J7" secondAttribute="trailing" constant="20" id="oic-iP-PAU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="O4f-Dd-Beb" id="7Wx-YC-iJc"/>
                         <outlet property="categoryTextField" destination="M4u-aM-fRZ" id="vwu-zP-Nqr"/>
                         <outlet property="itemDescrip" destination="c0J-Em-Dtk" id="WAr-0D-8L3"/>
                         <outlet property="itemName" destination="yVe-fU-UDj" id="9gt-cJ-mtw"/>
@@ -168,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oY-3b-Eag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="76"/>
+            <point key="canvasLocation" x="773.91304347826087" y="75.669642857142847"/>
         </scene>
         <!--Edit Item View Controller-->
         <scene sceneID="AVY-KM-gTi">
@@ -288,8 +314,17 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -17,6 +17,7 @@ class SetItemViewController: UIViewController {
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemDescrip: UITextField!
+    @IBOutlet weak var backgroundView: UIImageView!
     
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
@@ -30,7 +31,7 @@ class SetItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        backgroundView.image = UIImage(named: "backgroundPic")
         qtyItemsStepper.wraps = false
         qtyItemsStepper.autorepeat = true
         categoryPickerView.delegate = self
