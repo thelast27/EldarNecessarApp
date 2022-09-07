@@ -42,7 +42,6 @@
 		4DA04AFA28BE5825001CCF25 /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */; };
 		4DA04AFC28BE5866001CCF25 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA04AFB28BE5866001CCF25 /* MapViewController.swift */; };
 		4DB4B49328C778EE00B6889D /* WeatherVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4B49228C778EE00B6889D /* WeatherVC+Extension.swift */; };
-		4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */; };
 		CE3D0C31CAA0583C3ACFC289 /* Pods_EldarNecessarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975BAF22BA5E52AE99168EC1 /* Pods_EldarNecessarApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +81,6 @@
 		4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
 		4DA04AFB28BE5866001CCF25 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4DB4B49228C778EE00B6889D /* WeatherVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherVC+Extension.swift"; sourceTree = "<group>"; };
-		4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetTripVС+Extension.swift"; sourceTree = "<group>"; };
 		724A6E6BD32DB495900CEF5D /* Pods-EldarNecessarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EldarNecessarApp.release.xcconfig"; path = "Target Support Files/Pods-EldarNecessarApp/Pods-EldarNecessarApp.release.xcconfig"; sourceTree = "<group>"; };
 		975BAF22BA5E52AE99168EC1 /* Pods_EldarNecessarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EldarNecessarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E3E56984FE8580B8CA933B /* Pods-EldarNecessarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EldarNecessarApp.debug.xcconfig"; path = "Target Support Files/Pods-EldarNecessarApp/Pods-EldarNecessarApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				4D070ADA28A28AC500FA7102 /* TripListVC+Extension.swift */,
-				4DD40BDE28A518F0001A0F4F /* SetTripVС+Extension.swift */,
 				4D11C85128BA167D008569F7 /* ItemsListVC+Extension.swift */,
 				4DB4B49228C778EE00B6889D /* WeatherVC+Extension.swift */,
 				4D6C5AE228C77AEB0019C082 /* Int+Extension.swift */,
@@ -405,7 +402,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9FF9B028C5F4C8009F7EF5 /* CurrentWeatherTableViewCell.swift in Sources */,
-				4DD40BDF28A518F0001A0F4F /* SetTripVС+Extension.swift in Sources */,
 				4D9FF9B528C5F89D009F7EF5 /* WeatherManager.swift in Sources */,
 				4D9FF9A728C5EC0A009F7EF5 /* WeatherViewController.swift in Sources */,
 				4D11C85428BA4134008569F7 /* EditItemViewController.swift in Sources */,

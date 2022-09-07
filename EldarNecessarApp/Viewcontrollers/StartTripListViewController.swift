@@ -15,7 +15,6 @@ class StartTripListViewController: UIViewController {
     @IBOutlet weak var backgroundPic: UIImageView!
     
     
-    var contentOfDirectory: [URL] = []
     var resultsRealmData: Results<Trips>!
     var realmManager = RealmManager()
     
@@ -36,10 +35,6 @@ class StartTripListViewController: UIViewController {
     @objc func addTripAction(_ sender: Any) {
         if let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetTripViewController") as? SetTripViewController {
             VC.tripsClosure = { [ weak self ] text in
-                self?.tripListTableView.reloadData()
-            }
-            VC.picsClosure = { [ weak self ] pics in
-                self?.contentOfDirectory.insert(pics, at: 0)
                 self?.tripListTableView.reloadData()
             }
             navigationController?.present(VC, animated: true)
