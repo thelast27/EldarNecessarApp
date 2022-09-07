@@ -14,7 +14,7 @@ class WeatherViewController: UIViewController {
     var lat: Double = 0.0
     var long: Double = 0.0
     var currentAndForecustedWeather: CurrentAndForecastWeather?
-    var weatherManagerDelegte: RestAPIProviderProtocol = WeatherManager()
+    private var weatherManagerDelegte: RestAPIProviderProtocol = WeatherManager()
     var dailyWeather: [DailyWeatherData]?
     
     override func viewDidLoad() {
