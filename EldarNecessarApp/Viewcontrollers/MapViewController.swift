@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
     
     typealias SetGeoIngo = ([Double]) -> Void
     private var realmManager = RealmManager()
-    var trips: Trips!
+    private var trips: Trips!
     var long: Double = 0.0
     var lat: Double = 0.0
     var id: ObjectId!
