@@ -204,16 +204,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jgw-QM-ROD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ES9-iO-lT1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ymQ-rw-CWg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="muf-ed-LUo">
                                 <rect key="frame" x="20" y="44" width="374" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzN-0w-Tou">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-08-Yar">
                                         <rect key="frame" x="0.0" y="59" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -261,8 +274,12 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZv-GP-j9A">
                                         <rect key="frame" x="0.0" y="84.5" width="374" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <color key="baseBackgroundColor" red="0.191679606" green="0.40085482360000002" blue="0.3429064027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="saveEditedItem:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="aLf-8b-Dc4"/>
                                         </connections>
@@ -272,7 +289,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Delete">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                            <color key="baseBackgroundColor" red="0.61768371890289608" green="0.092399808381223039" blue="0.0053366536162189043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="deleteButton:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="4QS-ZW-Huz"/>
@@ -281,7 +298,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-Cz-pcN">
                                         <rect key="frame" x="0.0" y="176.5" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel">
+                                            <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cancelEditing:" destination="Dzg-90-uOJ" eventType="touchUpInside" id="sZ0-Zn-gMl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -290,17 +312,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rhy-gt-iI1" firstAttribute="top" secondItem="6Vr-e0-hXT" secondAttribute="bottom" constant="10" id="0bL-Qd-lGU"/>
+                            <constraint firstItem="ES9-iO-lT1" firstAttribute="leading" secondItem="3i6-JI-vcC" secondAttribute="leading" id="4Lb-U3-zvc"/>
+                            <constraint firstAttribute="bottom" secondItem="jgw-QM-ROD" secondAttribute="bottom" id="CCG-XV-dVl"/>
                             <constraint firstItem="6Vr-e0-hXT" firstAttribute="leading" secondItem="3i6-JI-vcC" secondAttribute="leading" constant="20" id="CKF-7E-GUI"/>
+                            <constraint firstAttribute="bottom" secondItem="ES9-iO-lT1" secondAttribute="bottom" id="EsV-dN-5h3"/>
+                            <constraint firstItem="jgw-QM-ROD" firstAttribute="leading" secondItem="3i6-JI-vcC" secondAttribute="leading" id="ExZ-aW-erk"/>
                             <constraint firstItem="rhy-gt-iI1" firstAttribute="leading" secondItem="3i6-JI-vcC" secondAttribute="leading" constant="20" id="Kb4-YO-bsN"/>
+                            <constraint firstItem="ES9-iO-lT1" firstAttribute="top" secondItem="LIw-D1-DPo" secondAttribute="top" id="MRD-LO-il5"/>
+                            <constraint firstItem="jgw-QM-ROD" firstAttribute="trailing" secondItem="3i6-JI-vcC" secondAttribute="trailing" id="UuL-t0-Bpd"/>
+                            <constraint firstItem="jgw-QM-ROD" firstAttribute="width" secondItem="ES9-iO-lT1" secondAttribute="height" multiplier="207:448" id="ab2-vY-1Gw"/>
                             <constraint firstItem="3i6-JI-vcC" firstAttribute="trailing" secondItem="rhy-gt-iI1" secondAttribute="trailing" constant="20" id="fja-md-JlC"/>
+                            <constraint firstItem="jgw-QM-ROD" firstAttribute="top" secondItem="LIw-D1-DPo" secondAttribute="top" id="h0n-x3-5gD"/>
                             <constraint firstItem="muf-ed-LUo" firstAttribute="leading" secondItem="3i6-JI-vcC" secondAttribute="leading" constant="20" id="lhz-YX-siB"/>
                             <constraint firstItem="muf-ed-LUo" firstAttribute="top" secondItem="3i6-JI-vcC" secondAttribute="top" id="rpe-u2-Vsz"/>
+                            <constraint firstItem="ES9-iO-lT1" firstAttribute="trailing" secondItem="3i6-JI-vcC" secondAttribute="trailing" id="sgm-gH-ci8"/>
                             <constraint firstItem="3i6-JI-vcC" firstAttribute="trailing" secondItem="muf-ed-LUo" secondAttribute="trailing" constant="20" id="txj-xv-7da"/>
                             <constraint firstItem="3i6-JI-vcC" firstAttribute="trailing" secondItem="6Vr-e0-hXT" secondAttribute="trailing" constant="20" id="vHB-8z-z1R"/>
                             <constraint firstItem="6Vr-e0-hXT" firstAttribute="top" secondItem="muf-ed-LUo" secondAttribute="bottom" constant="10" id="vdw-tF-urC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="jgw-QM-ROD" id="jVz-rx-oYj"/>
                         <outlet property="categoryTextField" destination="7vd-GR-lQN" id="epi-Es-9tp"/>
                         <outlet property="itemDescrip" destination="0Qf-08-Yar" id="n07-rQ-qoY"/>
                         <outlet property="itemName" destination="RzN-0w-Tou" id="hz1-8U-duG"/>
@@ -310,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joN-et-k1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1488" y="76"/>
+            <point key="canvasLocation" x="1486.9565217391305" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
@@ -326,8 +358,8 @@
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -16,6 +16,7 @@ class EditItemViewController: UIViewController {
     @IBOutlet weak var itemQty: UILabel!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var qtyItemStepper: UIStepper!
+    @IBOutlet weak var backgroundView: UIImageView!
     
     private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     var titleForTop = ""
@@ -29,6 +30,8 @@ class EditItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backgroundView.image = UIImage(named: "backgroundPic")
+        
         title = titleForTop
         
         qtyItemStepper.wraps = false
@@ -36,7 +39,6 @@ class EditItemViewController: UIViewController {
         categoryPickerView.delegate = self
         categoryPickerView.dataSource = self
         categoryTextField.inputView = categoryPickerView
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +80,10 @@ class EditItemViewController: UIViewController {
         realmManager.deleteITemFromTrip(item: items, from: trips) {
             navigationController?.popViewController(animated: true)
         }
+    }
+    
+    @IBAction func cancelEditing(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
