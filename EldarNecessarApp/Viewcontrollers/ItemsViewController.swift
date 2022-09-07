@@ -15,7 +15,7 @@ class ItemsViewController: UIViewController {
     typealias SendTripsID = (Trips) -> Void
     
     var resultsRealmDataWithItem: List<ItemsForTrip>!
-    var trips: Trips!
+    var trips: Trips?
     var realmManager = RealmManager()
     var id: ObjectId!
     var sendTripsIdClosure: SendTripsID?
@@ -27,8 +27,9 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         
         trips = realmManager.realm.object(ofType: Trips.self, forPrimaryKey: id)
-        sendTripsIdClosure?(trips)
-        resultsRealmDataWithItem = trips.items
+        guard let trip = trips else { return }
+        sendTripsIdClosure?(trip)
+        resultsRealmDataWithItem = trip.items
         itemListTableView.reloadData()
         
         itemListTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: ItemTableViewCell.key)
@@ -40,7 +41,7 @@ class ItemsViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        if trips.coordinatesAvailable == true {
+        if trips?.coordinatesAvailable == true {
             navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "map"), style: .done, target: self, action: #selector(showMap)),
                                                   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemAction)),
                                                   UIBarButtonItem(image: UIImage(systemName: "cloud.sun.rain.fill"), style: .done, target: self, action: #selector(showWeather))]
@@ -52,11 +53,11 @@ class ItemsViewController: UIViewController {
     }
     
     @objc func addItemAction(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController else { return }
+        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "SetItemVC") as? SetItemViewController, let trip = trips else { return }
         vc.itemsClosure = { [ weak self ] items in
             self?.itemListTableView.reloadData()
         }
-        vc.trips = trips
+        vc.trips = trip
         
         let navigationVC = UINavigationController(rootViewController: vc)
         present(navigationVC, animated: true)

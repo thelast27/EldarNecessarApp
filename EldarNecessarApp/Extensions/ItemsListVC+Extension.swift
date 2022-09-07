@@ -32,10 +32,10 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController else { return }
+        guard let vc = UIStoryboard(name: "ItemsList", bundle: nil).instantiateViewController(withIdentifier: "EditItemVC") as? EditItemViewController, let trip = trips else { return }
                     vc.titleForTop = resultsRealmDataWithItem[indexPath.row].itemName
         vc.items = resultsRealmDataWithItem[indexPath.row]
-        vc.trips = trips
+        vc.trips = trip
                     navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -46,8 +46,8 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         if items.isPacked == false {
             let doCheckMark = UIContextualAction(style: .normal, title: "Check") { [weak self] (action, view, completionHandler) in
                 
-                guard let items = self?.resultsRealmDataWithItem[indexPath.row] else { return }
-                self?.realmManager.writeItemIsPackedDataToRealm(item: items, in: self?.trips ?? Trips.init())
+                guard let items = self?.resultsRealmDataWithItem[indexPath.row], let trip = self?.trips else { return }
+                self?.realmManager.writeItemIsPackedDataToRealm(item: items, in: trip)
                 tableView.reloadData()
                 completionHandler(true)
             }
