@@ -21,11 +21,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.itemName.text = items.itemName
         cell.itemDescription.text = items.itemDescription
         cell.itemQty.text = "\(items.itemQty)"
-        if items.isPacked == true {
-            cell.checkMark.isHidden = false
-        } else {
-            cell.checkMark.isHidden = true
-        }
+        cell.checkMark.isHidden = items.isPacked == true ? false : true
         return cell
     }
     
