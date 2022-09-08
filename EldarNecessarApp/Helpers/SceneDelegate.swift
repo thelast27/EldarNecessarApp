@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         guard   let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TripListViewController") as? StartTripListViewController else { return }
         let navVC = UINavigationController(rootViewController: vc)
+        navVC.navigationBar.tintColor = .black
         window?.rootViewController = navVC
     }
     
