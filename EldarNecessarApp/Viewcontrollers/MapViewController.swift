@@ -38,7 +38,7 @@ class MapViewController: UIViewController {
     }
     
     @objc func closeScreen() {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func savePlaceForTRip(_ sender: Any) {
         realmManager.addMarkerToRealm(lat: lat, long: long, in: trips) {
