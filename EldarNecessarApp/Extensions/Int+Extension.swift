@@ -31,7 +31,7 @@ enum DateFormat: String {
         case .hours: return "HH"
         case .days: return "E"
         case .daysWithoutYear: return "HH MMMM yyyy"
-        case .fullTime: return "EEEE, MMM d, yyyy"
+        case .fullTime: return "EEEE, MMM d"
         }
     }
 }
