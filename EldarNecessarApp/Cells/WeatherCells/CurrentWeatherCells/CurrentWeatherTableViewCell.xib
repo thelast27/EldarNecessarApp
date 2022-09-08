@@ -112,6 +112,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="currentWeather" destination="XAV-kv-oSt" id="fed-hf-xKW"/>
                 <outlet property="dewPoint" destination="v8N-PO-79Z" id="cSm-Cz-qzd"/>
