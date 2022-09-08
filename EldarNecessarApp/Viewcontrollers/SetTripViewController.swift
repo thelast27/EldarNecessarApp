@@ -33,7 +33,15 @@ class SetTripViewController: UIViewController {
     @IBAction func saveSetTrip(_ sender: Any) {
         guard tripName.hasText,
               let textForCell = tripName.text
-        else { return }
+        else {
+            UIView.animate(withDuration: 1) {
+                self.tripName.backgroundColor = .red
+            }
+            UIView.animate(withDuration: 1.2) {
+                self.tripName.backgroundColor = .systemGray4
+            }
+            return
+        }
         guard let tripNotes = tripNotes.text else { return }
         let trip = Trips()
         trip.tripName = textForCell
