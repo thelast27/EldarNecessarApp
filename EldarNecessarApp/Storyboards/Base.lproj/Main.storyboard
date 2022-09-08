@@ -129,7 +129,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Swd-2f-EX0">
                                 <rect key="frame" x="30" y="680" width="354" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BJ-iS-LZ3">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BJ-iS-LZ3">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                         <color key="tintColor" red="0.2627450980392157" green="0.54729080200000002" blue="0.42205235359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
@@ -206,6 +206,7 @@
                         <outlet property="departureDate" destination="ufq-8t-hHK" id="nhe-zx-IGa"/>
                         <outlet property="durationLabel" destination="bLJ-Uy-O9a" id="Ocv-aI-pNY"/>
                         <outlet property="returnDate" destination="5kL-xg-5UF" id="mek-05-Cbr"/>
+                        <outlet property="saveTripButton" destination="3BJ-iS-LZ3" id="7Ic-Yn-qS0"/>
                         <outlet property="tripName" destination="ZbQ-aR-NEQ" id="kYr-in-Gv4"/>
                         <outlet property="tripNotes" destination="sgX-HC-4hR" id="VA9-oC-CYI"/>
                         <outlet property="viewForBackground" destination="Bla-Xj-gaO" id="CAc-sg-oqT"/>

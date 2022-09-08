@@ -18,10 +18,12 @@ class SetTripViewController: UIViewController {
     @IBOutlet weak var returnDate: UIDatePicker!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var viewForBackground: UIImageView!
+    @IBOutlet weak var saveTripButton: UIButton!
     
     typealias SendTripsDataClosure = (Trips) -> Void
     var tripsClosure: SendTripsDataClosure?
     private var realmManager = RealmManager()
+    private var duration: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,7 @@ class SetTripViewController: UIViewController {
         let trip = Trips()
         trip.tripName = textForCell
         trip.tripNotes = tripNotes
+        trip.tripDuration = duration
         realmManager.writeTripDataToRealm(data: trip)
         tripsClosure?(trip)
         dismiss(animated: true)
@@ -68,6 +71,7 @@ class SetTripViewController: UIViewController {
         let durationFromDepartureDate = departureDate.calendar.dateComponents([.day, .month, .year], from: departureDate.date)
         let durationFromReturnDate = returnDate.calendar.dateComponents([.day, .month, .year], from: returnDate.date)
         guard let durationInDays = Calendar.current.dateComponents([.day], from: durationFromDepartureDate, to: durationFromReturnDate).day else { return }
+        duration = durationInDays
         durationLabel.isHidden = false
         
         if durationInDays < 0 {
@@ -79,9 +83,11 @@ class SetTripViewController: UIViewController {
             }
             durationLabel.textColor = .red
             durationLabel.text = "Return date is earlier than departure!"
+            saveTripButton.isEnabled = false
         } else {
             durationLabel.textColor = .black
             durationLabel.text = "Trip for \(durationInDays) day(s)"
+            saveTripButton.isEnabled = true
         }
         view.layoutIfNeeded()
     }
