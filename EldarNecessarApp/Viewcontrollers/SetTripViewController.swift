@@ -59,11 +59,23 @@ class SetTripViewController: UIViewController {
         
         let durationFromDepartureDate = departureDate.calendar.dateComponents([.day, .month, .year], from: departureDate.date)
         let durationFromReturnDate = returnDate.calendar.dateComponents([.day, .month, .year], from: returnDate.date)
-        let durationInDays = durationFromReturnDate.day! - durationFromDepartureDate.day!
+        guard let durationInDays = Calendar.current.dateComponents([.day], from: durationFromDepartureDate, to: durationFromReturnDate).day else { return }
         durationLabel.isHidden = false
-        durationLabel.text = "Trip for \(durationInDays) day(s)"
-        view.layoutIfNeeded()
         
+        if durationInDays < 0 {
+            UIView.animate(withDuration: 1) {
+                self.returnDate.backgroundColor = .red
+            }
+            UIView.animate(withDuration: 1.5) {
+                self.returnDate.backgroundColor = .none
+            }
+            durationLabel.textColor = .red
+            durationLabel.text = "Return date is earlier than departure!"
+        } else {
+            durationLabel.textColor = .black
+            durationLabel.text = "Trip for \(durationInDays) day(s)"
+        }
+        view.layoutIfNeeded()
     }
     
 }
