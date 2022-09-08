@@ -32,7 +32,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAU-tw-Emx">
-                                <rect key="frame" x="30" y="831" width="354" height="31"/>
+                                <rect key="frame" x="30" y="781" width="354" height="31"/>
                                 <color key="tintColor" red="0.191679606" green="0.40085482360000002" blue="0.3429064027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
@@ -45,21 +45,21 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="LAU-tw-Emx" secondAttribute="bottom" constant="50" id="2Dl-Ue-sLr"/>
+                            <constraint firstItem="LAU-tw-Emx" firstAttribute="top" secondItem="2gh-Ma-mAf" secondAttribute="bottom" constant="98" id="2QU-uz-UXX"/>
                             <constraint firstItem="pH6-IS-5Vd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3Lt-hD-E1O"/>
+                            <constraint firstItem="LAU-tw-Emx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="B7J-ZC-TaQ"/>
                             <constraint firstAttribute="bottom" secondItem="ZYJ-ki-MFY" secondAttribute="bottom" id="BEr-DT-Kwa"/>
                             <constraint firstItem="ZYJ-ki-MFY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ENC-hq-5Zv"/>
                             <constraint firstItem="2gh-Ma-mAf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="H0j-1O-gI5"/>
                             <constraint firstAttribute="bottom" secondItem="pH6-IS-5Vd" secondAttribute="bottom" id="Jry-S0-Xel"/>
                             <constraint firstItem="pH6-IS-5Vd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VBk-OY-tF1"/>
-                            <constraint firstItem="LAU-tw-Emx" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="VZJ-WF-NV1"/>
-                            <constraint firstItem="LAU-tw-Emx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="aqt-hT-ixE"/>
                             <constraint firstItem="ZYJ-ki-MFY" firstAttribute="width" secondItem="pH6-IS-5Vd" secondAttribute="height" multiplier="207:448" id="bJs-jI-vAZ"/>
                             <constraint firstItem="pH6-IS-5Vd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="eQy-qK-QhN"/>
-                            <constraint firstItem="LAU-tw-Emx" firstAttribute="top" secondItem="2gh-Ma-mAf" secondAttribute="bottom" constant="148" id="f6n-5G-1GW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LAU-tw-Emx" secondAttribute="trailing" constant="30" id="kfA-k2-4eO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2gh-Ma-mAf" secondAttribute="trailing" constant="16" id="oae-cl-y4U"/>
                             <constraint firstItem="2gh-Ma-mAf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="121" id="pvp-5P-y35"/>
                             <constraint firstItem="ZYJ-ki-MFY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uYC-5p-QQS"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LAU-tw-Emx" secondAttribute="trailing" constant="30" id="yOf-eC-0gs"/>
                             <constraint firstItem="ZYJ-ki-MFY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yRL-Uo-gbX"/>
                         </constraints>
                     </view>
