@@ -13,7 +13,6 @@ class CurrentWeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var weatherDescription: UILabel!
     @IBOutlet weak var viewForImage: UIImageView!
     @IBOutlet weak var feelsLike: UILabel!
-    @IBOutlet weak var mainDescription: UILabel!
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var humidity: UILabel!
     @IBOutlet weak var dewPoint: UILabel!
@@ -36,7 +35,6 @@ class CurrentWeatherTableViewCell: UITableViewCell {
             guard let temp = date.current?.temp,
                   let description = date.current?.weather?.first?.description,
                   let icon = date.current?.weather?.first?.icon,
-                  let mainDescription = date.current?.weather?.first?.main,
                   let feelsLike = date.current?.feelsLike,
                   let windSpeed = date.current?.windSpeed,
                   let humidity = date.current?.humidity,
@@ -47,9 +45,8 @@ class CurrentWeatherTableViewCell: UITableViewCell {
             
             self.viewForImage.getImageFromTheInternet(icon)
             self.currentWeather.text = "\(Int(temp)) °C"
-            self.weatherDescription.text = "Now \(description)"
+            self.weatherDescription.text = "\(description)"
             self.feelsLike.text = "Feels like \(Int(feelsLike))°C"
-            self.mainDescription.text = "\(mainDescription)"
             self.windSpeed.text = "Wind speed is \(windSpeed) m/s"
             self.humidity.text = "Humidity is \(humidity) %"
             self.dewPoint.text = "Dew point is \(dewPoint)°C"
