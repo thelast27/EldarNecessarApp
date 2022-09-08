@@ -27,9 +27,8 @@
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyp-0e-Oyo">
-                                <rect key="frame" x="0.0" y="-46" width="414" height="862"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyp-0e-Oyo">
+                                <rect key="frame" x="0.0" y="-43" width="414" height="939"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="Bjc-b0-nMh"/>
@@ -42,13 +41,17 @@
                         <constraints>
                             <constraint firstItem="7bh-Xs-qiO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0Bk-qD-Lnl"/>
                             <constraint firstItem="7bh-Xs-qiO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3aq-BL-EaX"/>
+                            <constraint firstItem="cyp-0e-Oyo" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-43" id="GeC-du-riQ"/>
                             <constraint firstItem="utX-vL-8Qi" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ISA-yU-cXp"/>
                             <constraint firstItem="utX-vL-8Qi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jdi-9t-tay"/>
                             <constraint firstItem="7bh-Xs-qiO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Js8-Hj-flg"/>
+                            <constraint firstAttribute="trailing" secondItem="cyp-0e-Oyo" secondAttribute="trailing" id="Qrn-2e-GNb"/>
                             <constraint firstAttribute="bottom" secondItem="7bh-Xs-qiO" secondAttribute="bottom" id="Uov-dg-zom"/>
+                            <constraint firstItem="cyp-0e-Oyo" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="h9n-tm-DSa"/>
                             <constraint firstAttribute="bottom" secondItem="utX-vL-8Qi" secondAttribute="bottom" id="ivp-Wk-wtk"/>
                             <constraint firstItem="utX-vL-8Qi" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="mds-Jw-ExV"/>
                             <constraint firstItem="utX-vL-8Qi" firstAttribute="width" secondItem="7bh-Xs-qiO" secondAttribute="height" multiplier="207:448" id="p28-SS-D5s"/>
+                            <constraint firstAttribute="bottom" secondItem="cyp-0e-Oyo" secondAttribute="bottom" id="tnC-09-Y2d"/>
                         </constraints>
                     </view>
                     <connections>
