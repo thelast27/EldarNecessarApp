@@ -16,12 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZYJ-ki-MFY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pH6-IS-5Vd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tQt-mL-wZ1">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-Ma-mAf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="493"/>
+                                <rect key="frame" x="16" y="121" width="382" height="562"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAU-tw-Emx">
                                 <rect key="frame" x="30" y="831" width="354" height="31"/>
+                                <color key="tintColor" red="0.191679606" green="0.40085482360000002" blue="0.3429064027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
@@ -32,17 +45,27 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BWe-yS-aVP"/>
-                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="GZn-At-ocj"/>
+                            <constraint firstItem="pH6-IS-5Vd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3Lt-hD-E1O"/>
+                            <constraint firstAttribute="bottom" secondItem="ZYJ-ki-MFY" secondAttribute="bottom" id="BEr-DT-Kwa"/>
+                            <constraint firstItem="ZYJ-ki-MFY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ENC-hq-5Zv"/>
+                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="H0j-1O-gI5"/>
+                            <constraint firstAttribute="bottom" secondItem="pH6-IS-5Vd" secondAttribute="bottom" id="Jry-S0-Xel"/>
+                            <constraint firstItem="pH6-IS-5Vd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VBk-OY-tF1"/>
                             <constraint firstItem="LAU-tw-Emx" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="VZJ-WF-NV1"/>
                             <constraint firstItem="LAU-tw-Emx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="aqt-hT-ixE"/>
-                            <constraint firstItem="LAU-tw-Emx" firstAttribute="top" secondItem="2gh-Ma-mAf" secondAttribute="bottom" constant="294" id="chf-LY-Ztb"/>
-                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="44" id="kgl-7H-ErO"/>
+                            <constraint firstItem="ZYJ-ki-MFY" firstAttribute="width" secondItem="pH6-IS-5Vd" secondAttribute="height" multiplier="207:448" id="bJs-jI-vAZ"/>
+                            <constraint firstItem="pH6-IS-5Vd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="eQy-qK-QhN"/>
+                            <constraint firstItem="LAU-tw-Emx" firstAttribute="top" secondItem="2gh-Ma-mAf" secondAttribute="bottom" constant="148" id="f6n-5G-1GW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2gh-Ma-mAf" secondAttribute="trailing" constant="16" id="oae-cl-y4U"/>
+                            <constraint firstItem="2gh-Ma-mAf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="121" id="pvp-5P-y35"/>
+                            <constraint firstItem="ZYJ-ki-MFY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uYC-5p-QQS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LAU-tw-Emx" secondAttribute="trailing" constant="30" id="yOf-eC-0gs"/>
+                            <constraint firstItem="ZYJ-ki-MFY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yRL-Uo-gbX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tripPlaceSelected" destination="LAU-tw-Emx" id="Oc4-gv-ZOL"/>
+                        <outlet property="viewForBackground" destination="ZYJ-ki-MFY" id="8dW-pG-Dk5"/>
                         <outlet property="viewForMap" destination="2gh-Ma-mAf" id="hGf-Kk-AUV"/>
                     </connections>
                 </viewController>
