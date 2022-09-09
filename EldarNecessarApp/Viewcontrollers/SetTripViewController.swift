@@ -82,7 +82,7 @@ class SetTripViewController: UIViewController {
                 self.returnDate.backgroundColor = .none
             }
             durationLabel.textColor = .red
-            durationLabel.text = "Return date is earlier than departure!"
+            durationLabel.text = "Wrong date!"
             saveTripButton.isEnabled = false
         } else {
             durationLabel.textColor = .black
