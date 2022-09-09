@@ -25,8 +25,9 @@ class StartTripListViewController: UIViewController {
         self.navigationItem.title = "Trips list"
 
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTripAction))
-        self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .black
+        
         tripListTableView.register(UINib(nibName: "TripTableViewCell", bundle: nil), forCellReuseIdentifier: TripTableViewCell.key)
         resultsRealmData = realmManager.getTripDataFromRealm()
     }

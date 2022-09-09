@@ -11,7 +11,7 @@ class TripTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tripName: UILabel!
     @IBOutlet weak var tripNotes: UILabel!
-    @IBOutlet weak var tripPhoto: UIImageView!
+    @IBOutlet weak var durationLabel: UILabel!
     
     
     static var key = "TripTableViewCell"
@@ -20,7 +20,7 @@ class TripTableViewCell: UITableViewCell {
         super.awakeFromNib()
         tripName.text = ""
         tripNotes.text = ""
-        
+        durationLabel.text = ""
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -13,6 +13,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var viewForMap: UIView!
     @IBOutlet weak var tripPlaceSelected: UIButton!
+    @IBOutlet weak var viewForBackground: UIImageView!
     
     typealias SetGeoIngo = ([Double]) -> Void
     private var realmManager = RealmManager()
@@ -24,18 +25,20 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewForBackground.image = UIImage(named: "backgroundPic")
+        viewForMap.layer.cornerRadius = 5
+        viewForMap.clipsToBounds = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(closeScreen))
         
         let camera = GMSCameraPosition.camera(withLatitude: 54.029, longitude: 27.597, zoom: 5.0)
-        let mapView = GMSMapView.map(withFrame: self.viewForMap.frame, camera: camera)
+        let mapView = GMSMapView.map(withFrame: self.viewForMap.bounds, camera: camera)
         mapView.delegate = self
         self.viewForMap.addSubview(mapView)
         trips = realmManager.realm.object(ofType: Trips.self, forPrimaryKey: id)
     }
     
     @objc func closeScreen() {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func savePlaceForTRip(_ sender: Any) {
         realmManager.addMarkerToRealm(lat: lat, long: long, in: trips) {

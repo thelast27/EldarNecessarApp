@@ -20,6 +20,7 @@ extension StartTripListViewController: UITableViewDataSource, UITableViewDelegat
         let trip = resultsRealmData[indexPath.row]
         cell.tripName.text = trip.tripName
         cell.tripNotes.text = trip.tripNotes
+        cell.durationLabel.text = "For \(trip.tripDuration) day(s)"
         return cell
     }
     

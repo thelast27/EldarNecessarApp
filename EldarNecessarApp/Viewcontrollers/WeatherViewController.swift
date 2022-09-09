@@ -10,6 +10,7 @@ import UIKit
 class WeatherViewController: UIViewController {
     
     @IBOutlet weak var weatherTableView: UITableView!
+    @IBOutlet weak var backgroundView: UIImageView!
     
     var lat: Double = 0.0
     var long: Double = 0.0
@@ -19,6 +20,8 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundView.image = UIImage(named: "backgroundPic")
         
         weatherTableView.register(UINib(nibName: "CurrentWeatherTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrentWeatherCell")
         weatherTableView.register(UINib(nibName: "DailyTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyWeather")

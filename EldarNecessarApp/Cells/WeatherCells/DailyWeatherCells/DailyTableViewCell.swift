@@ -26,7 +26,7 @@ class DailyTableViewCell: UITableViewCell {
     func update(date: DailyWeatherData) {
         guard let dt = date.dt, let temp = date.temp?.day, let icon = date.weather?.first?.icon else { return }
         weatherImage.getImageFromTheInternet(icon)
-        dayLabel.text = dt.updateDateFormat(dateFormat: .days)
+        dayLabel.text = dt.updateDateFormat(dateFormat: .fullTime)
         tempLabel.text = "\(Int(temp)) °C"
         
     }
