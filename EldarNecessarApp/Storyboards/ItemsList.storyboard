@@ -125,21 +125,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Xp-T8-DUn">
-                                <rect key="frame" x="20" y="189" width="374" height="161.5"/>
+                                <rect key="frame" x="20" y="189" width="374" height="77"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-H9-c54">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selected category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4u-aM-fRZ">
-                                        <rect key="frame" x="0.0" y="35.5" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNH-Mv-RTK">
-                                        <rect key="frame" x="0.0" y="84.5" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <color key="tintColor" red="0.191679606" green="0.40085482360000002" blue="0.3429064027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
@@ -148,7 +137,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1C-tL-dIb">
-                                        <rect key="frame" x="0.0" y="130.5" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="46" width="374" height="31"/>
                                         <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                         <color key="tintColor" systemColor="separatorColor"/>
                                         <state key="normal" title="Button"/>
@@ -185,7 +174,6 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="O4f-Dd-Beb" id="7Wx-YC-iJc"/>
-                        <outlet property="categoryTextField" destination="M4u-aM-fRZ" id="vwu-zP-Nqr"/>
                         <outlet property="itemDescrip" destination="c0J-Em-Dtk" id="WAr-0D-8L3"/>
                         <outlet property="itemName" destination="yVe-fU-UDj" id="9gt-cJ-mtw"/>
                         <outlet property="itemQtyLabel" destination="1ve-cA-Vpb" id="fmf-PC-2V6"/>
@@ -259,21 +247,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rhy-gt-iI1">
-                                <rect key="frame" x="20" y="189" width="374" height="207.5"/>
+                                <rect key="frame" x="20" y="189" width="374" height="123"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr7-CQ-cUc">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selected category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-GR-lQN">
-                                        <rect key="frame" x="0.0" y="35.5" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZv-GP-j9A">
-                                        <rect key="frame" x="0.0" y="84.5" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Save"/>
@@ -285,7 +262,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQk-dx-jbD">
-                                        <rect key="frame" x="0.0" y="130.5" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="46" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Delete">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,7 +273,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-Cz-pcN">
-                                        <rect key="frame" x="0.0" y="176.5" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="92" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Cancel">
                                             <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
@@ -333,7 +310,6 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="jgw-QM-ROD" id="jVz-rx-oYj"/>
-                        <outlet property="categoryTextField" destination="7vd-GR-lQN" id="epi-Es-9tp"/>
                         <outlet property="itemDescrip" destination="0Qf-08-Yar" id="n07-rQ-qoY"/>
                         <outlet property="itemName" destination="RzN-0w-Tou" id="hz1-8U-duG"/>
                         <outlet property="itemQty" destination="a9d-E9-8az" id="EQn-Em-eIW"/>

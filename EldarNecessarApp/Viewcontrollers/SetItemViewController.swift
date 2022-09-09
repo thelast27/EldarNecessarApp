@@ -10,17 +10,17 @@ import UIKit
 
 class SetItemViewController: UIViewController {
     
-    let categoryPickerView = UIPickerView()
+//    let categoryPickerView = UIPickerView()
     
     @IBOutlet weak var itemQtyLabel: UILabel!
     @IBOutlet weak var qtyItemsStepper: UIStepper!
-    @IBOutlet weak var categoryTextField: UITextField!
+//    @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemDescrip: UITextField!
     @IBOutlet weak var backgroundView: UIImageView!
     
     
-    private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
+//    private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     
     typealias SendItemInfo = (ItemsForTrip) -> Void
     var itemsClosure: SendItemInfo?
@@ -34,10 +34,10 @@ class SetItemViewController: UIViewController {
         backgroundView.image = UIImage(named: "backgroundPic")
         qtyItemsStepper.wraps = false
         qtyItemsStepper.autorepeat = true
-        categoryPickerView.delegate = self
-        categoryPickerView.dataSource = self
-        
-        categoryTextField.inputView = categoryPickerView
+//        categoryPickerView.delegate = self
+//        categoryPickerView.dataSource = self
+//
+//        categoryTextField.inputView = categoryPickerView
         
     }
     
@@ -71,23 +71,23 @@ class SetItemViewController: UIViewController {
 }
 
 
-extension SetItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryPickerArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categoryPickerArray[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        categoryTextField.text = categoryPickerArray[row]
-        categoryTextField.resignFirstResponder()
-    }
-    
-}
+//extension SetItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return categoryPickerArray.count
+//    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return categoryPickerArray[row]
+//    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        categoryTextField.text = categoryPickerArray[row]
+//        categoryTextField.resignFirstResponder()
+//    }
+//    
+//}
 
