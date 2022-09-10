@@ -36,7 +36,7 @@
                                 <color key="tintColor" red="0.191679606" green="0.40085482360000002" blue="0.3429064027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
                                     <action selector="savePlaceForTRip:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="il1-y3-zsd"/>
                                 </connections>
