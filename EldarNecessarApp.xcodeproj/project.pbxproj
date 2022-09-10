@@ -43,6 +43,7 @@
 		4DAFAA7328CB7A97002E6363 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4DAFAA7228CB7A97002E6363 /* Realm */; };
 		4DAFAA7528CB7A97002E6363 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DAFAA7428CB7A97002E6363 /* RealmSwift */; };
 		4DB4B49328C778EE00B6889D /* WeatherVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4B49228C778EE00B6889D /* WeatherVC+Extension.swift */; };
+		4DFA3DA228CCC4B8008DCFC5 /* MapVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA3DA128CCC4B8008DCFC5 /* MapVC+Extension.swift */; };
 		CE3D0C31CAA0583C3ACFC289 /* Pods_EldarNecessarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975BAF22BA5E52AE99168EC1 /* Pods_EldarNecessarApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		4DA04AF928BE5825001CCF25 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
 		4DA04AFB28BE5866001CCF25 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4DB4B49228C778EE00B6889D /* WeatherVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherVC+Extension.swift"; sourceTree = "<group>"; };
+		4DFA3DA128CCC4B8008DCFC5 /* MapVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Extension.swift"; sourceTree = "<group>"; };
 		724A6E6BD32DB495900CEF5D /* Pods-EldarNecessarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EldarNecessarApp.release.xcconfig"; path = "Target Support Files/Pods-EldarNecessarApp/Pods-EldarNecessarApp.release.xcconfig"; sourceTree = "<group>"; };
 		975BAF22BA5E52AE99168EC1 /* Pods_EldarNecessarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EldarNecessarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E3E56984FE8580B8CA933B /* Pods-EldarNecessarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EldarNecessarApp.debug.xcconfig"; path = "Target Support Files/Pods-EldarNecessarApp/Pods-EldarNecessarApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				4DB4B49228C778EE00B6889D /* WeatherVC+Extension.swift */,
 				4D6C5AE228C77AEB0019C082 /* Int+Extension.swift */,
 				4D5951DD28C8D555006A80FA /* UIImageView+Extension.swift */,
+				4DFA3DA128CCC4B8008DCFC5 /* MapVC+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				4D77091E28C647C4006720A7 /* DailyWeatherModel.swift in Sources */,
 				4D6C5AE328C77AEB0019C082 /* Int+Extension.swift in Sources */,
 				4D08D3B528B7818E00B2A359 /* RealmManager.swift in Sources */,
+				4DFA3DA228CCC4B8008DCFC5 /* MapVC+Extension.swift in Sources */,
 				4D070AE128A2900B00FA7102 /* StartTripListViewController.swift in Sources */,
 				4D1EE88928AB9718003F6EA9 /* SetItemViewController.swift in Sources */,
 				4D070ADE28A28D0400FA7102 /* TripTableViewCell.swift in Sources */,
