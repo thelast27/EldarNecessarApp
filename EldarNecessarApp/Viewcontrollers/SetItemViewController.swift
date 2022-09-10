@@ -56,7 +56,15 @@ class SetItemViewController: UIViewController {
         
         guard itemName.hasText,
               let name = itemName.text
-        else { return }
+        else {
+            UIView.animate(withDuration: 1) {
+                self.itemName.backgroundColor = .red
+            }
+            UIView.animate(withDuration: 1.2) {
+                self.itemName.backgroundColor = .systemGray4
+            }
+            return
+        }
         
         guard let descr = itemDescrip.text, let qty = itemQtyLabel.text else { return }
         
