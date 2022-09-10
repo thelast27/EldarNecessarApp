@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import UIKit
+
+extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        marker.map = mapView
+        tripPlaceSelected.isEnabled = true
+        lat = coordinate.latitude
+        long = coordinate.longitude
+
+    }
+}
