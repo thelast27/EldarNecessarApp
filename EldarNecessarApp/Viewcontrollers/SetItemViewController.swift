@@ -10,17 +10,17 @@ import UIKit
 
 class SetItemViewController: UIViewController {
     
-//    let categoryPickerView = UIPickerView()
+    //    let categoryPickerView = UIPickerView()
     
     @IBOutlet weak var itemQtyLabel: UILabel!
     @IBOutlet weak var qtyItemsStepper: UIStepper!
-//    @IBOutlet weak var categoryTextField: UITextField!
+    //    @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemDescrip: UITextField!
     @IBOutlet weak var backgroundView: UIImageView!
     
     
-//    private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
+    //    private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     
     typealias SendItemInfo = (ItemsForTrip) -> Void
     var itemsClosure: SendItemInfo?
@@ -34,16 +34,18 @@ class SetItemViewController: UIViewController {
         backgroundView.image = UIImage(named: "backgroundPic")
         qtyItemsStepper.wraps = false
         qtyItemsStepper.autorepeat = true
-//        categoryPickerView.delegate = self
-//        categoryPickerView.dataSource = self
-//
-//        categoryTextField.inputView = categoryPickerView
+        //        categoryPickerView.delegate = self
+        //        categoryPickerView.dataSource = self
+        //
+        //        categoryTextField.inputView = categoryPickerView
         
     }
     
     
     @IBAction func qtyItemsStepperAction(_ sender: UIStepper) {
+        sender.minimumValue = 1
         itemQtyLabel.text = Int(sender.value).description
+        
     }
     
     @IBAction func cancelSetItem(_ sender: Any) {
@@ -61,7 +63,12 @@ class SetItemViewController: UIViewController {
         let items = ItemsForTrip()
         items.itemName = name
         items.itemDescription = descr
-        items.itemQty = Int(qty) ?? 0
+        if itemQtyLabel.text == "0" {
+            items.itemQty = 1
+        } else {
+            items.itemQty = Int(qty) ?? 0
+        }
+        
         realmManager.writeItemDataToRealm(item: items, in: trips)
         
         itemsClosure?(items)
