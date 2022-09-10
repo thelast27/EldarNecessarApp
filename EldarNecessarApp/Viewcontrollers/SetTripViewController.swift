@@ -27,6 +27,8 @@ class SetTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        departureDate.minimumDate = .now
+        returnDate.minimumDate = .now
         hideKeyboardWhenTappedAround()
         viewForBackground.image = UIImage(named: "backgroundPic")
     }
@@ -75,17 +77,8 @@ class SetTripViewController: UIViewController {
         durationLabel.isHidden = false
         
         if durationInDays < 0 {
-            UIView.animate(withDuration: 1) {
-                self.returnDate.backgroundColor = .red
-            }
-            UIView.animate(withDuration: 1.5) {
-                self.returnDate.backgroundColor = .none
-            }
-            durationLabel.textColor = .red
-            durationLabel.text = "Wrong date!"
             saveTripButton.isEnabled = false
         } else {
-            durationLabel.textColor = .black
             durationLabel.text = "Trip for \(durationInDays) day(s)"
             saveTripButton.isEnabled = true
         }
