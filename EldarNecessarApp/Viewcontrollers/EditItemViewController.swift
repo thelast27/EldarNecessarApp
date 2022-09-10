@@ -21,7 +21,7 @@ class EditItemViewController: UIViewController {
 //    private var categoryPickerArray: [String] = ["Outdoor", "Clothing", "Comfort & Entertaiment", "Documents", "Electronic & Gadget", "Family", "Medical & Health", "Toiletries", "Others"]
     var titleForTop = ""
     var items: ItemsForTrip?
-    var trips = Trips()
+    var trips: Trips?
     private var realmManager = RealmManager()
     private var updatedItem = ItemsForTrip()
     
@@ -57,6 +57,7 @@ class EditItemViewController: UIViewController {
     @IBAction func saveEditedItem(_ sender: Any) {
         
         guard let name = itemName.text,
+              let trip = trips,
               let qty = Int(itemQty.text ?? ""),
               let descr = itemDescrip.text,
               let items = items
@@ -68,18 +69,23 @@ class EditItemViewController: UIViewController {
         
         updatedItem.itemDescription = descr
         updatedItem.itemQty = qty
-        realmManager.editItem(item: items, in: trips, updatedItems: updatedItem) {
+        realmManager.editItem(item: items, in: trip, updatedItems: updatedItem) {
             navigationController?.popViewController(animated: true)
         }
     }
     
     @IBAction func deleteButton(_ sender: Any) {
-        
-        guard let items = items else { return }
-        
-        realmManager.deleteITemFromTrip(item: items, from: trips) {
-            navigationController?.popViewController(animated: true)
-        }
+        guard let items = items, let trip = trips else { return }
+        let alertController = UIAlertController(title: "Attention!", message: "Delete item?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Yes", style: .cancel, handler: { [weak self] alert in
+            self?.realmManager.deleteITemFromTrip(item: items, from: trip) {
+                self?.navigationController?.popViewController(animated: true)
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: { [weak self] alert in
+            self?.dismiss(animated: true)
+        }))
+       present(alertController, animated: true)
     }
     
     @IBAction func cancelEditing(_ sender: Any) {
