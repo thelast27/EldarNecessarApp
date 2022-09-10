@@ -21,6 +21,8 @@
 			</array>
 		</dict>
 	</dict>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 	<key>weatherApiKey</key>
 	<string>48d181f9d784cbd7bb7cae6874e3519b</string>
 	<key>googleMapsAPI</key>
