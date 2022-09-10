@@ -77,12 +77,12 @@ class EditItemViewController: UIViewController {
     @IBAction func deleteButton(_ sender: Any) {
         guard let items = items, let trip = trips else { return }
         let alertController = UIAlertController(title: "Attention!", message: "Delete item?", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Yes", style: .cancel, handler: { [weak self] alert in
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] alert in
             self?.realmManager.deleteITemFromTrip(item: items, from: trip) {
                 self?.navigationController?.popViewController(animated: true)
             }
         }))
-        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: { [weak self] alert in
+        alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: { [weak self] alert in
             self?.dismiss(animated: true)
         }))
        present(alertController, animated: true)
