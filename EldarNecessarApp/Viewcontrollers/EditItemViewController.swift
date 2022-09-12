@@ -41,6 +41,8 @@ class EditItemViewController: UIViewController {
             itemQty.text = "\(myItems.itemQty)"
             qtyItemStepper.value = Double(myItems.itemQty)
         }
+        
+        hideKeyboardWhenTappedAround()
 //        categoryPickerView.delegate = self
 //        categoryPickerView.dataSource = self
 //        categoryTextField.inputView = categoryPickerView

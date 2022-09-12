@@ -34,6 +34,8 @@ class SetItemViewController: UIViewController {
         backgroundView.image = UIImage(named: "backgroundPic")
         qtyItemsStepper.wraps = false
         qtyItemsStepper.autorepeat = true
+        
+        hideKeyboardWhenTappedAround()
         //        categoryPickerView.delegate = self
         //        categoryPickerView.dataSource = self
         //
