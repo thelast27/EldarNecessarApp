@@ -36,6 +36,11 @@ class EditItemViewController: UIViewController {
         
         qtyItemStepper.wraps = false
         qtyItemStepper.autorepeat = true
+        
+        if let myItems = self.items {
+            itemQty.text = "\(myItems.itemQty)"
+            qtyItemStepper.value = Double(myItems.itemQty)
+        }
 //        categoryPickerView.delegate = self
 //        categoryPickerView.dataSource = self
 //        categoryTextField.inputView = categoryPickerView
@@ -45,13 +50,13 @@ class EditItemViewController: UIViewController {
         if let myItems = self.items {
             itemName.text = myItems.itemName
             itemDescrip.text = myItems.itemDescription
-            itemQty.text = "\(myItems.itemQty)"
         }
     }
     
     
     @IBAction func qtyItemStepperAction(_ sender: UIStepper) {
-        itemQty.text = Int(sender.value).description //есть баг, что степпер считает с нуля, даже если лейба изначально 1 или 5, счет будет с нуля.
+        sender.minimumValue = 1
+        itemQty.text = Int(sender.value).description
     }
     
     @IBAction func saveEditedItem(_ sender: Any) {
