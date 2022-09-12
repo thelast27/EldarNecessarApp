@@ -84,122 +84,115 @@
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-0M-q2P">
-                                <rect key="frame" x="30" y="304" width="354" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pep-fW-UeS">
+                                <rect key="frame" x="30" y="433" width="354" height="330.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-hG-xQM">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h3A-ej-P6A">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="78"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-aR-NEQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-HC-4hR">
+                                                <rect key="frame" x="0.0" y="44" width="354" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-0M-q2P">
+                                        <rect key="frame" x="0.0" y="93" width="354" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-hG-xQM">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-8t-hHK">
+                                                <rect key="frame" x="254" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="N6Q-gM-zME"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="en_UA"/>
+                                                <connections>
+                                                    <action selector="getDateFromPicker:" destination="D30-0n-d1I" eventType="valueChanged" id="OaU-9r-eja"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-sD-3wt">
+                                        <rect key="frame" x="0.0" y="158" width="354" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-9m-ddz">
+                                                <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-xg-5UF">
+                                                <rect key="frame" x="254" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="auE-Q6-T4g"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="en_UA"/>
+                                                <connections>
+                                                    <action selector="returnDate:" destination="D30-0n-d1I" eventType="valueChanged" id="kut-U6-0UZ"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLJ-Uy-O9a">
+                                        <rect key="frame" x="0.0" y="223" width="354" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ufq-8t-hHK">
-                                        <rect key="frame" x="254" y="0.0" width="100" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="N6Q-gM-zME"/>
-                                        </constraints>
-                                        <locale key="locale" localeIdentifier="en_UA"/>
-                                        <connections>
-                                            <action selector="getDateFromPicker:" destination="D30-0n-d1I" eventType="valueChanged" id="OaU-9r-eja"/>
-                                        </connections>
-                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Swd-2f-EX0">
+                                        <rect key="frame" x="0.0" y="258.5" width="354" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BJ-iS-LZ3">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
+                                                <color key="tintColor" red="0.2627450980392157" green="0.54729080200000002" blue="0.42205235359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveSetTrip:" destination="D30-0n-d1I" eventType="touchUpInside" id="xvA-C9-6XO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDN-9v-WSF">
+                                                <rect key="frame" x="0.0" y="41" width="354" height="31"/>
+                                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                                                <color key="tintColor" systemColor="separatorColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButton:" destination="D30-0n-d1I" eventType="touchUpInside" id="wGK-FT-H8b"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-sD-3wt">
-                                <rect key="frame" x="30" y="359" width="354" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-9m-ddz">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-xg-5UF">
-                                        <rect key="frame" x="254" y="0.0" width="100" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="auE-Q6-T4g"/>
-                                        </constraints>
-                                        <locale key="locale" localeIdentifier="en_UA"/>
-                                        <connections>
-                                            <action selector="returnDate:" destination="D30-0n-d1I" eventType="valueChanged" id="kut-U6-0UZ"/>
-                                        </connections>
-                                    </datePicker>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Swd-2f-EX0">
-                                <rect key="frame" x="30" y="680" width="354" height="72"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BJ-iS-LZ3">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
-                                        <color key="tintColor" red="0.2627450980392157" green="0.54729080200000002" blue="0.42205235359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Save"/>
-                                        <connections>
-                                            <action selector="saveSetTrip:" destination="D30-0n-d1I" eventType="touchUpInside" id="xvA-C9-6XO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDN-9v-WSF">
-                                        <rect key="frame" x="0.0" y="41" width="354" height="31"/>
-                                        <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
-                                        <color key="tintColor" systemColor="separatorColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
-                                        <connections>
-                                            <action selector="cancelButton:" destination="D30-0n-d1I" eventType="touchUpInside" id="wGK-FT-H8b"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h3A-ej-P6A">
-                                <rect key="frame" x="30" y="213" width="354" height="83"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-aR-NEQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-HC-4hR">
-                                        <rect key="frame" x="0.0" y="49" width="354" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLJ-Uy-O9a">
-                                <rect key="frame" x="30" y="437" width="354" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acd-mE-M2N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bLJ-Uy-O9a" firstAttribute="top" secondItem="KQ4-sD-3wt" secondAttribute="bottom" constant="28" id="1rE-xl-OcG"/>
-                            <constraint firstItem="h3A-ej-P6A" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="topMargin" constant="169" id="3at-w9-cAo"/>
-                            <constraint firstItem="Swd-2f-EX0" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="41W-k9-0MU"/>
-                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="width" secondItem="1W5-8J-QEB" secondAttribute="height" multiplier="207:448" id="4ei-yL-0gf"/>
-                            <constraint firstItem="6TF-0M-q2P" firstAttribute="top" secondItem="h3A-ej-P6A" secondAttribute="bottom" constant="8" id="68s-fA-UBV"/>
-                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="Swd-2f-EX0" secondAttribute="trailing" constant="30" id="8jw-OI-xfr"/>
-                            <constraint firstItem="h3A-ej-P6A" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="B5g-DB-h2r"/>
-                            <constraint firstItem="KQ4-sD-3wt" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="H0c-qX-bV0"/>
-                            <constraint firstItem="6TF-0M-q2P" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="JMa-P8-I0x"/>
-                            <constraint firstItem="bLJ-Uy-O9a" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" constant="30" id="LHl-Zg-JIn"/>
-                            <constraint firstItem="KQ4-sD-3wt" firstAttribute="top" secondItem="6TF-0M-q2P" secondAttribute="bottom" constant="5" id="NYT-e6-6n7"/>
-                            <constraint firstItem="1W5-8J-QEB" firstAttribute="trailing" secondItem="acd-mE-M2N" secondAttribute="trailing" id="Umf-uK-RUE"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Swd-2f-EX0" secondAttribute="bottom" constant="110" id="UwL-kn-7lK"/>
-                            <constraint firstItem="1W5-8J-QEB" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="top" id="ZP2-Ia-PD7"/>
-                            <constraint firstItem="1W5-8J-QEB" firstAttribute="leading" secondItem="acd-mE-M2N" secondAttribute="leading" id="atO-mK-nvc"/>
-                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="top" secondItem="1W5-8J-QEB" secondAttribute="top" id="bXW-lC-CI6"/>
-                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="bLJ-Uy-O9a" secondAttribute="trailing" constant="30" id="bsm-vE-Pj6"/>
-                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="KQ4-sD-3wt" secondAttribute="trailing" constant="30" id="d11-BY-MrT"/>
-                            <constraint firstAttribute="bottom" secondItem="1W5-8J-QEB" secondAttribute="bottom" id="i75-aQ-E5x"/>
-                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="h3A-ej-P6A" secondAttribute="trailing" constant="30" id="jIH-RP-EfO"/>
-                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="leading" secondItem="1W5-8J-QEB" secondAttribute="leading" id="kHh-fO-wbU"/>
-                            <constraint firstItem="acd-mE-M2N" firstAttribute="trailing" secondItem="6TF-0M-q2P" secondAttribute="trailing" constant="30" id="uL1-Df-uVK"/>
-                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="bottom" secondItem="1W5-8J-QEB" secondAttribute="bottom" id="xBr-i3-JZc"/>
+                            <constraint firstItem="1W5-8J-QEB" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="top" id="Eu2-i5-MaW"/>
+                            <constraint firstAttribute="trailing" secondItem="1W5-8J-QEB" secondAttribute="trailing" id="Lfm-cM-P3P"/>
+                            <constraint firstItem="acd-mE-M2N" firstAttribute="bottom" secondItem="Pep-fW-UeS" secondAttribute="bottom" constant="98.5" id="N2S-dV-nlC"/>
+                            <constraint firstAttribute="bottom" secondItem="Bla-Xj-gaO" secondAttribute="bottom" id="Rvj-73-wqJ"/>
+                            <constraint firstItem="Pep-fW-UeS" firstAttribute="leading" secondItem="geu-9l-nfb" secondAttribute="leading" constant="30" id="eMQ-XD-Zid"/>
+                            <constraint firstAttribute="bottom" secondItem="1W5-8J-QEB" secondAttribute="bottom" id="fH5-mA-dM6"/>
+                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="top" secondItem="geu-9l-nfb" secondAttribute="top" id="fR0-Sk-K8K"/>
+                            <constraint firstAttribute="trailing" secondItem="Bla-Xj-gaO" secondAttribute="trailing" id="jqT-Pq-dee"/>
+                            <constraint firstAttribute="trailing" secondItem="Pep-fW-UeS" secondAttribute="trailing" constant="30" id="k7X-vQ-TZn"/>
+                            <constraint firstItem="Bla-Xj-gaO" firstAttribute="leading" secondItem="geu-9l-nfb" secondAttribute="leading" id="xgl-Tp-2GJ"/>
+                            <constraint firstItem="1W5-8J-QEB" firstAttribute="leading" secondItem="geu-9l-nfb" secondAttribute="leading" id="yGA-fe-DT9"/>
                         </constraints>
                     </view>
                     <connections>

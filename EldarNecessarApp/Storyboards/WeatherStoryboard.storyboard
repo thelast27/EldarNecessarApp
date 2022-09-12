@@ -28,7 +28,7 @@
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyp-0e-Oyo">
-                                <rect key="frame" x="0.0" y="-43" width="414" height="939"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="842"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="Bjc-b0-nMh"/>
@@ -41,7 +41,7 @@
                         <constraints>
                             <constraint firstItem="7bh-Xs-qiO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0Bk-qD-Lnl"/>
                             <constraint firstItem="7bh-Xs-qiO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3aq-BL-EaX"/>
-                            <constraint firstItem="cyp-0e-Oyo" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-43" id="GeC-du-riQ"/>
+                            <constraint firstItem="cyp-0e-Oyo" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="54" id="GeC-du-riQ"/>
                             <constraint firstItem="utX-vL-8Qi" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ISA-yU-cXp"/>
                             <constraint firstItem="utX-vL-8Qi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jdi-9t-tay"/>
                             <constraint firstItem="7bh-Xs-qiO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Js8-Hj-flg"/>
